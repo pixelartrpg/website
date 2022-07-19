@@ -18,7 +18,8 @@
 				height = "-=95px";
 				$("#animate").animate({
 				top: height,
-				opacity: '0.75'
+				opacity: '0.75',
+				left: '+=100px'
 			  }, 5000, function() {
 			  });
 			});
@@ -26,7 +27,8 @@
 				$width = parseInt($("#mainPanel").css("width"),10) + 200;
 				$("#birds").animate({
 				right: '+=' & $width & 'px',
-				opacity: '0'
+				opacity: '0',
+				top: '+=150px'
 			  }, 15000, function() {
 			  });
 			});
