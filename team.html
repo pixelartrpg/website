@@ -1,0 +1,239 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta property="og:title" content="Pixel Art RPG" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://www.pixelartrpg.com" />
+		<meta property="og:image" content="https://pixelartrpg.com/card.png" />
+		<meta property="og:description" content="Pixel Art RPG: Secret of the Dreamers is a multiplayer RPG in development. It is being stylized in the Retro 16 Bit era of graphics." />
+		<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script async data-uid="a9a4702e27" src="https://fierce-motivator-2545.ck.page/a9a4702e27/index.js"></script>
+		<script
+		  src="https://code.jquery.com/jquery-3.6.0.min.js"
+		  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+		  crossorigin="anonymous"></script>
+		<script src="https://kit.fontawesome.com/06f3c5cdb8.js" crossorigin="anonymous"></script>
+		<script>
+			$(document).ready(function(e) {
+				height = "-=95px";
+				$("#animate").animate({
+				top: height,
+				opacity: '0.75',
+				right: '-=20px'
+			  }, 5000, function() {
+			  });
+			});
+			$(document).ready(function(e) {
+				$width = parseInt($("#mainPanel").css("width"),10) + 200;
+				$("#birds").animate({
+				right: '+=' & $width & 'px',
+				opacity: '0',
+				top: '+=150px'
+			  }, 15000, function() {
+			  });
+			});
+		</script>
+	</head>
+
+	<body class="bg-gray-700 bg-cover bg-center px-8 py-8" style="background-image: url(background.png); font-family: 'WebFont', Arial, sans-serif;">
+		<div id="mainPanel" class="flex flex-col mx-auto h-full" style="box-shadow: 0 0 50px #000; max-width:1200px">
+			<div class="w-full bg-black rounded-t-xl bg-center z-10" style="background-image: url(logo_bg.png); min-height:100px;">
+				<img id="animate" class="absolute top-32 ml-2 mt-2" style="height: 56px; width: 56px; z-index:-10; opacity: 0.1" src="moon.png">
+				<img id="birds" class="absolute -mt-2" style="height: 100px; width: 100px; z-index:20;transform: scaleX(-1); opacity: 40%" src="birds.gif">
+				<img class="h-20 mt-2 mx-auto z-20" src="logo_text.png">
+			</div>
+			<div id="navbanner" class="banner bg-sky-600 text-white shadow-xl w-full border-t border-b border-black z-20">
+				<div class="pt-2 w-full h-20 lg:h-20 flex content-center">
+					<a href="index.html" class="cursor-pointer hover:opacity-100 flex-1 opacity-50">
+						<div class="text-center"><i class="fa-solid fa-clouds-moon mx-1 lg:px-4 pt-2 text-2xl"></i></div>
+						<div class="text-center text-xs lg:text-md mt-1 hidden lg:block whitespace-nowrap">Home</div>
+						<div class="text-center text-xs lg:hidden">Home</div>
+					</a>
+					<a href="https://blog.pixelartrpg.com" class="cursor-pointer hover:opacity-100 flex-1 opacity-50">
+						<div class="text-center"><i class="fa-solid fa-blog mx-1 lg:px-4 pt-2 text-2xl"></i></div>
+						<div class="text-center text-xs lg:text-md mt-1 hidden lg:block whitespace-nowrap">Developer Blog</div>
+						<div class="text-center text-xs lg:hidden">Blog</div>
+					</a>
+					<a href="photos.html" class="cursor-pointer hover:opacity-100 flex-1 opacity-50">
+						<div class="text-center"><i class="far fa-images mx-1 lg:px-4 pt-2 text-2xl"></i></div>
+						<div class="text-center text-xs lg:text-md mt-1 hidden lg:block whitespace-nowrap">Photo Gallery</div>
+						<div class="text-center text-xs lg:hidden">Photos</div>
+					</a>
+					<a href="team.html" class="cursor-pointer hover:opacity-100 flex-1 opacity-100">
+						<div class="text-center"><i class="fas fa-users mx-1 lg:px-4 pt-2 text-2xl"></i></div>
+						<div class="text-center text-xs lg:text-md mt-1 hidden lg:block whitespace-nowrap">Our Team</div>
+						<div class="text-center text-xs lg:hidden">Team</div>
+					</a>
+				</div>
+			</div>
+			<main class="flex-grow text-white w-full border-2 border-black" style="background: rgba(0, 0, 0, .8);">
+				<section aria-labelledby="photos-heading" class="max-w-2xl mx-auto pt-4 pb-4 px-4 lg:max-w-7xl">
+				  <div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
+					<div class="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
+					  <div class="space-y-5 sm:space-y-4">
+						<h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl" style="font-family: 'WebFont', Arial, sans-serif;">About Us</h2>
+						<p class="text-xl text-gray-500">Nulla quam felis, enim faucibus proin velit, ornare id pretium. Augue ultrices sed arcu condimentum vestibulum suspendisse. Volutpat eu faucibus vivamus eget bibendum cras.</p>
+					  </div>
+					  <div class="lg:col-span-2">
+						<ul role="list" class="space-y-12 sm:divide-y sm:divide-gray-800 sm:space-y-0 sm:-mt-8 lg:gap-x-8 lg:space-y-0">
+						  <li class="sm:py-8">
+							<div class="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
+							  <div class="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
+								<img class="object-cover shadow-lg rounded-lg" src="card.png" alt="">
+							  </div>
+							  <div class="sm:col-span-2">
+								<div class="space-y-4">
+								  <div class="text-lg leading-6 font-medium space-y-1">
+									<h3>Leslie Alexander</h3>
+									<p class="text-indigo-600">Co-Founder / CEO</p>
+								  </div>
+								  <div class="text-lg">
+									<p class="text-gray-500">Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.</p>
+								  </div>
+								  <ul role="list" class="flex space-x-5">
+									<li>
+									  <a href="#" class="text-gray-400 hover:text-gray-500">
+										<span class="sr-only">Twitter</span>
+										<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+										  <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
+										</svg>
+									  </a>
+									</li>
+									<li>
+									  <a href="#" class="text-gray-400 hover:text-gray-500">
+										<span class="sr-only">LinkedIn</span>
+										<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+										  <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
+										</svg>
+									  </a>
+									</li>
+								  </ul>
+								</div>
+							  </div>
+							</div>
+						  </li>
+						  <li class="sm:py-8">
+							<div class="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
+							  <div class="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
+								<img class="object-cover shadow-lg rounded-lg" src="card.png" alt="">
+							  </div>
+							  <div class="sm:col-span-2">
+								<div class="space-y-4">
+								  <div class="text-lg leading-6 font-medium space-y-1">
+									<h3>Leslie Alexander</h3>
+									<p class="text-indigo-600">Co-Founder / CEO</p>
+								  </div>
+								  <div class="text-lg">
+									<p class="text-gray-500">Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.</p>
+								  </div>
+								  <ul role="list" class="flex space-x-5">
+									<li>
+									  <a href="#" class="text-gray-400 hover:text-gray-500">
+										<span class="sr-only">Twitter</span>
+										<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+										  <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
+										</svg>
+									  </a>
+									</li>
+									<li>
+									  <a href="#" class="text-gray-400 hover:text-gray-500">
+										<span class="sr-only">LinkedIn</span>
+										<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+										  <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
+										</svg>
+									  </a>
+									</li>
+								  </ul>
+								</div>
+							  </div>
+							</div>
+						  </li>
+						  <li class="sm:py-8">
+							<div class="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
+							  <div class="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
+								<img class="object-cover shadow-lg rounded-lg" src="card.png" alt="">
+							  </div>
+							  <div class="sm:col-span-2">
+								<div class="space-y-4">
+								  <div class="text-lg leading-6 font-medium space-y-1">
+									<h3>Leslie Alexander</h3>
+									<p class="text-indigo-600">Co-Founder / CEO</p>
+								  </div>
+								  <div class="text-lg">
+									<p class="text-gray-500">Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.</p>
+								  </div>
+								  <ul role="list" class="flex space-x-5">
+									<li>
+									  <a href="#" class="text-gray-400 hover:text-gray-500">
+										<span class="sr-only">Twitter</span>
+										<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+										  <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
+										</svg>
+									  </a>
+									</li>
+									<li>
+									  <a href="#" class="text-gray-400 hover:text-gray-500">
+										<span class="sr-only">LinkedIn</span>
+										<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+										  <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
+										</svg>
+									  </a>
+									</li>
+								  </ul>
+								</div>
+							  </div>
+							</div>
+						  </li>
+						</ul>
+					  </div>
+					</div>
+				</div>
+				</section>
+			</main>
+			<footer class="bg-black rounded-b-xl w-full">
+			  <div class="max-w-7xl mx-auto py-2 px-1 md:flex md:items-center md:justify-between md:pl-4">
+				<div class="flex justify-center space-x-8 md:space-x-4 md:order-2">
+				  <a href="https://www.facebook.com/pixelartrpg" class="text-gray-400 hover:text-gray-500">
+					<span class="sr-only">Facebook</span>
+					<i class="fa-brands fa-facebook-f text-2xl"></i>
+				  </a>
+
+				  <a href="https://www.instagram.com/pixelartrpgig/" class="text-gray-400 hover:text-gray-500">
+					<span class="sr-only">Instagram</span>
+					<i class="fa-brands fa-instagram text-2xl"></i>
+				  </a>
+
+				  <a href="https://twitter.com/pixelartrpg" class="text-gray-400 hover:text-gray-500">
+					<span class="sr-only">Twitter</span>
+					<i class="fa-brands fa-twitter text-2xl"></i>
+				  </a>
+
+				  <a href="https://github.com/pixelartrpg" class="text-gray-400 hover:text-gray-500">
+					<span class="sr-only">GitHub</span>
+					<i class="fa-brands fa-github text-2xl"></i>
+				  </a>
+				  <a href="https://blog.pixelartrpg.com" class="text-gray-400 hover:text-gray-500">
+					<span class="sr-only">Blog</span>
+					<i class="fa-solid fa-blog text-2xl">&nbsp;</i>
+				  </a>
+				</div>
+				<div class="mt-2 md:mt-0 md:order-1">
+				  <p class="text-center text-base text-gray-400">&copy; 2022 Pixel Art RPG</p>
+				</div>
+			  </div>
+			</footer>
+			<br>
+			<!--
+			<div class="flex items-center m-2 fixed bottom-0 left-0 border border-gray-400 rounded p-2 bg-gray-300 text-red-600 text-xl z-50 opacity-100 cursor-pointer">
+				<span class="ml-1 sm:hidden md:hidden lg:hidden xl:hidden">xs</span>
+				<span class="ml-1 hidden sm:inline md:hidden font-extrabold">sm</span>
+				<span class="ml-1 hidden md:inline lg:hidden font-extrabold">md</span>
+				<span class="ml-1 hidden lg:inline xl:hidden font-extrabold">lg</span>
+				<span class="ml-1 hidden xl:inline font-extrabold">xl</span>
+			</div>
+			-->
+		</div>
+	</body>
+</html>
