@@ -6,82 +6,80 @@
 		<script src="https://kit.fontawesome.com/06f3c5cdb8.js" crossorigin="anonymous"></script>
 	</head>
 
-	<body class="flex flex-col min-h-screen bg-gray-700 bg-cover bg-center py-10 px-5 md:px-32" style="background-image: url(background.png);">
-		<header class="w-full bg-black h-12 lg:h-16 rounded-t-xl lg:min-w-min">
-			<div class="text-lg lg:text-xl lg:text-2xl text-center pt-2 lg:pt-3 text-white">Pixel Art RPG: Secret Of the Dreamers</div>
-		</header>
-		<div id="navbanner" class="banner bg-blue-800 text-white shadow-xl">
-			<div class="pt-2 w-full h-16 lg:h-20 flex content-center" style="background-color:#393939;opacity: 0.75;">
-				<a href="https://blog.pixelartrpg.com" class="mx-1 lg:mx-4 mb-2 px-1 lg:px-3 cursor-pointer hover:bg-black flex-1 rounded-md">
-					<div class="text-center"><i class="fas fa-rss-square mx-1 lg:px-4 pt-2 text-2xl"></i></div>
-					<div class="text-center text-xs lg:text-md mt-1 hidden lg:block whitespace-nowrap">Developer Blog</div>
-					<div class="text-center text-xs lg:hidden">Blog</div>
-				</a>
-				<div class="mx-1 lg:mx-4 mb-2 px-3 cursor-pointer hover:bg-black flex-1 rounded-md">
-					<div class="text-center"><i class="far fa-images mx-1 lg:px-4 pt-2 text-2xl"></i></div>
-					<div class="text-center text-xs lg:text-md mt-1 hidden lg:block whitespace-nowrap">Photo Gallery</div>
-					<div class="text-center text-xs lg:hidden">Photos</div>
-				</div>
-				<div class="mx-1 lg:mx-4 mb-2 px-3 cursor-pointer hover:bg-black flex-1 rounded-md">
-					<div class="text-center"><i class="fa fa-comments-alt mx-1 lg:px-4 pt-2 text-2xl"></i></div>
-					<div class="text-center text-xs lg:text-md mt-1 hidden lg:block whitespace-nowrap">Forums</div>
-					<div class="text-center text-xs lg:hidden">Forum</div>
-				</div>
-				<div class="mx-1 lg:mx-4 mb-2 px-3 cursor-pointer hover:bg-black flex-1 rounded-md">
-					<div class="text-center"><i class="fas fa-users mx-1 lg:px-4 pt-2 text-2xl"></i></div>
-					<div class="text-center text-xs lg:text-md mt-1 hidden lg:block whitespace-nowrap">Our Team</div>
-					<div class="text-center text-xs lg:hidden">Team</div>
-				</div>
-				<div class="mx-1 lg:mx-4 mb-2 px-3 cursor-pointer hover:bg-black flex-1 rounded-md">
-					<div class="text-center"><i class="fas fa-envelope mx-1 lg:px-4 pt-2 text-2xl"></i></div>
-					<div class="text-center text-xs lg:text-md mt-1 hidden lg:block whitespace-nowrap">Contact Us</div>
-					<div class="text-center text-xs lg:hidden">Contact</div>
+	<body class="bg-gray-700 bg-cover bg-center" style="background-image: url(background.png);">
+		<div class="flex flex-col mx-8 mt-8 mb-12" style="box-shadow: 0 0 50px #000;">
+			<div class="w-full bg-black h-40 rounded-t-xl bg-center hidden lg:block" style="background-image: url(logo_bg.png);">
+				<div class="w-full h-40 bg-center" style="background-image: url(logo_text.png);"></div>
+			</div>
+			<div id="navbanner" class="banner bg-sky-600 text-white shadow-xl w-full">
+				<div class="pt-2 w-full h-20 lg:h-20 flex content-center">
+					<a href="https://blog.pixelartrpg.com" class="mx-1 lg:mx-4 mb-2 px-1 lg:px-3 cursor-pointer hover:bg-sky-900 flex-1 rounded-lg">
+						<div class="text-center"><i class="fas fa-rss-square mx-1 lg:px-4 pt-2 text-2xl"></i></div>
+						<div class="text-center text-xs lg:text-md mt-1 hidden lg:block whitespace-nowrap">Developer Blog</div>
+						<div class="text-center text-xs lg:hidden">Blog</div>
+					</a>
+					<div class="mx-1 lg:mx-4 mb-2 px-3 cursor-pointer hover:bg-sky-900 flex-1 rounded-lg">
+						<div class="text-center"><i class="far fa-images mx-1 lg:px-4 pt-2 text-2xl"></i></div>
+						<div class="text-center text-xs lg:text-md mt-1 hidden lg:block whitespace-nowrap">Photo Gallery</div>
+						<div class="text-center text-xs lg:hidden">Photos</div>
+					</div>
+					<div class="mx-1 lg:mx-4 mb-2 px-3 cursor-pointer hover:bg-sky-900 flex-1 rounded-lg">
+						<div class="text-center"><i class="fa fa-comments-alt mx-1 lg:px-4 pt-2 text-2xl"></i></div>
+						<div class="text-center text-xs lg:text-md mt-1 hidden lg:block whitespace-nowrap">Forums</div>
+						<div class="text-center text-xs lg:hidden">Forum</div>
+					</div>
+					<div class="mx-1 lg:mx-4 mb-2 px-3 cursor-pointer hover:bg-sky-900 flex-1 rounded-lg">
+						<div class="text-center"><i class="fas fa-users mx-1 lg:px-4 pt-2 text-2xl"></i></div>
+						<div class="text-center text-xs lg:text-md mt-1 hidden lg:block whitespace-nowrap">Our Team</div>
+						<div class="text-center text-xs lg:hidden">Team</div>
+					</div>
 				</div>
 			</div>
-		</div>
-		<main class="flex-grow text-white p-5" style="background: rgba(0, 0, 0, .5);">
-			Check Back For Content
-		</main>
-		<footer class="bg-black rounded-b-xl">
-		  <div class="max-w-7xl mx-auto py-2 px-1 md:flex md:items-center md:justify-between md:pl-4">
-			<div class="flex justify-center space-x-8 md:space-x-4 md:order-2">
-			  <a href="https://www.facebook.com/pixelartrpg" class="text-gray-400 hover:text-gray-500">
-				<span class="sr-only">Facebook</span>
-				<i class="fa-brands fa-facebook-f text-2xl"></i>
-			  </a>
+			<main class="flex-grow text-white p-5 w-full border-2 border-black" style="background: rgba(0, 0, 0, .5);">
+				<div style="height:200px">
+				</div>
+			</main>
+			<footer class="bg-black rounded-b-xl w-full">
+			  <div class="max-w-7xl mx-auto py-2 px-1 md:flex md:items-center md:justify-between md:pl-4">
+				<div class="flex justify-center space-x-8 md:space-x-4 md:order-2">
+				  <a href="https://www.facebook.com/pixelartrpg" class="text-gray-400 hover:text-gray-500">
+					<span class="sr-only">Facebook</span>
+					<i class="fa-brands fa-facebook-f text-2xl"></i>
+				  </a>
 
-			  <a href="https://www.instagram.com/pixelartrpgig/" class="text-gray-400 hover:text-gray-500">
-				<span class="sr-only">Instagram</span>
-				<i class="fa-brands fa-instagram text-2xl"></i>
-			  </a>
+				  <a href="https://www.instagram.com/pixelartrpgig/" class="text-gray-400 hover:text-gray-500">
+					<span class="sr-only">Instagram</span>
+					<i class="fa-brands fa-instagram text-2xl"></i>
+				  </a>
 
-			  <a href="https://twitter.com/pixelartrpg" class="text-gray-400 hover:text-gray-500">
-				<span class="sr-only">Twitter</span>
-				<i class="fa-brands fa-twitter text-2xl"></i>
-			  </a>
+				  <a href="https://twitter.com/pixelartrpg" class="text-gray-400 hover:text-gray-500">
+					<span class="sr-only">Twitter</span>
+					<i class="fa-brands fa-twitter text-2xl"></i>
+				  </a>
 
-			  <a href="https://github.com/pixelartrpg" class="text-gray-400 hover:text-gray-500">
-				<span class="sr-only">GitHub</span>
-				<i class="fa-brands fa-github text-2xl"></i>
-			  </a>
-			  <a href="https://blog.pixelartrpg.com" class="text-gray-400 hover:text-gray-500">
-				<span class="sr-only">Blog</span>
-				<i class="fa-solid fa-blog text-2xl">&nbsp;</i>
-			  </a>
+				  <a href="https://github.com/pixelartrpg" class="text-gray-400 hover:text-gray-500">
+					<span class="sr-only">GitHub</span>
+					<i class="fa-brands fa-github text-2xl"></i>
+				  </a>
+				  <a href="https://blog.pixelartrpg.com" class="text-gray-400 hover:text-gray-500">
+					<span class="sr-only">Blog</span>
+					<i class="fa-solid fa-blog text-2xl">&nbsp;</i>
+				  </a>
+				</div>
+				<div class="mt-2 md:mt-0 md:order-1">
+				  <p class="text-center text-base text-gray-400">&copy; 2022 Pixel Art RPG</p>
+				</div>
+			  </div>
+			</footer>
+			<!--
+			<div class="flex items-center m-2 fixed bottom-0 left-0 border border-gray-400 rounded p-2 bg-gray-300 text-red-600 text-xl z-50 opacity-100 cursor-pointer">
+				<span class="ml-1 sm:hidden md:hidden lg:hidden xl:hidden">xs</span>
+				<span class="ml-1 hidden sm:inline md:hidden font-extrabold">sm</span>
+				<span class="ml-1 hidden md:inline lg:hidden font-extrabold">md</span>
+				<span class="ml-1 hidden lg:inline xl:hidden font-extrabold">lg</span>
+				<span class="ml-1 hidden xl:inline font-extrabold">xl</span>
 			</div>
-			<div class="mt-2 md:mt-0 md:order-1">
-			  <p class="text-center text-base text-gray-400">&copy; 2022 Pixel Art RPG</p>
-			</div>
-		  </div>
-		</footer>
-		
-		
-		<div class="flex items-center m-2 fixed bottom-0 left-0 border border-gray-400 rounded p-2 bg-gray-300 text-red-600 text-3xl z-50 opacity-100 cursor-pointer">
-			<span class="ml-1 sm:hidden md:hidden lg:hidden xl:hidden">xs</span>
-			<span class="ml-1 hidden sm:inline md:hidden font-extrabold">sm</span>
-			<span class="ml-1 hidden md:inline lg:hidden font-extrabold">md</span>
-			<span class="ml-1 hidden lg:inline xl:hidden font-extrabold">lg</span>
-			<span class="ml-1 hidden xl:inline font-extrabold">xl</span>
+			-->
 		</div>
 	</body>
 </html>
