@@ -118,13 +118,13 @@
 	</head>
 
 	<body class="bg-gray-700 bg-cover bg-center px-8 bg-no-repeat" style="background-image: url('/images/background.png');">
-		<div id="mainPanel" class="flex flex-col mx-auto" style="box-shadow: 0 0 50px #000; max-width:1200px">
-			<div class="w-full bg-black bg-center z-10" style="background-image: url('/images/logo_bg.png'); min-height:125px;">
+		<div id="mainPanel" class="flex flex-col mx-auto min-h-full" style="box-shadow: 0 0 50px #000; max-width:1200px">
+			<div class="w-full bg-black bg-center z-10 flex" style="background-image: url('/images/logo_bg.png'); min-height:125px;">
 				<img id="animate" class="absolute top-32 ml-2 mt-2" style="height: 56px; width: 56px; z-index:-10; opacity: 0.1" src="/images/moon.png">
 				<img id="birds" class="absolute -mt-2" style="height: 100px; width: 100px; z-index:20;transform: scaleX(-1); opacity: 40%" src="/images/birds.gif">
 				<img class="h-20 mt-7 mx-auto z-20" src="/images/logo_text.png">
 			</div>
-			<div id="navbanner" class="banner bg-sky-700 text-white shadow-xl w-full border-t border-b border-black z-20">
+			<div id="navbanner" class="banner bg-sky-700 text-white shadow-xl w-full border-t border-b border-black z-20 flex">
 				<div class="pt-2 w-full h-20 lg:h-20 flex content-center">
 					<a href="/index.html" class="cursor-pointer hover:opacity-100 flex-1 opacity-50" style="font-family: 'mana_seed_staticregular', Arial, sans-serif;">
 						<div class="text-center"><i class="fa-solid fa-clouds-moon mx-1 lg:px-4 pt-2 text-2xl"></i></div>
@@ -144,7 +144,7 @@
 					</a>
 				</div>
 			</div>
-			<div class="text-white w-full border-2 border-black p-3 text-[11px] article" style="background: rgba(0, 0, 0, .5);">
+			<div class="text-white w-full border-2 border-black p-3 text-[11px] flex-grow" style="background: rgba(0, 0, 0, .5);">
 				
 
 
@@ -152,7 +152,7 @@
   
 </ul>
 
-		</div>
+			</div>
 			<footer class="bg-black w-full py-1">
 			  <div class="max-w-7xl mx-auto py-2 px-1 md:flex md:items-center md:justify-between md:pl-4">
 				<div class="flex justify-center space-x-8 md:space-x-4 md:order-2">
