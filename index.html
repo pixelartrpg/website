@@ -34,6 +34,15 @@
 			
 			  });
 			});
+			
+		
+			var intervalId = window.setInterval(function(){
+				const whatWhen = ["Tomorrow", "Today", "Yesterday", "Last Week", "Whenever", "Next Month", "Years Ago", "Forever"];
+				var theRandomNumber = Math.floor(Math.random() * 8) + 1;
+				$("#worldWhen").text(whatWhen[theRandomNumber]);
+			}, 2500);
+	
+		
 		</script>
 		<link rel="stylesheet" href="styles.css">
 		<style>
@@ -105,7 +114,7 @@
 						</div>
 						<div class="mt-6 sm:max-w-xl text-center md:text-left">
 						  <h1 class="text-4xl text-sky-300 tracking-wide uppercase">Take a step into <span class="text-sky-100">dreams</span></h1>
-						  <h1 class="text-2xl text-sky-300 tracking-wide uppercase ml-2">and rebuild the <span class="text-sky-100">world</span> yesterday</h1>
+						  <h1 class="text-2xl text-sky-300 tracking-wide uppercase ml-2">and rebuild the <span class="text-sky-100">world</span> <span id="worldWhen">yesterday</span></h1>
 						  <p class="mt-6 mb-3 text-xs text-sky-100 leading-5 bg-sky-700 p-4 opacity-75">
 							  Currently in development by a husband and wife duo. 
 							  We are developing it using Godot with a 16 bit pixelated art style. <br>Check back for updates and information!<br>
