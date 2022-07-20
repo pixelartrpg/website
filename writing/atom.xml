@@ -8,21 +8,12 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 19 Jul 2022 22:39:36 -0500</lastBuildDate><atom:link href="https://pixelartrpg.com/writing/atom.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Another New Post</title>
-      <link>https://pixelartrpg.com/07/19/2022/another-new-post/</link>
+      <title>Markdown Test</title>
+      <link>https://pixelartrpg.com/07/19/2022/markdown-test/</link>
       <pubDate>Tue, 19 Jul 2022 22:39:36 -0500</pubDate>
       
-      <guid>https://pixelartrpg.com/07/19/2022/another-new-post/</guid>
-      <description>This is another quick description for the list view. We want to give a nice little synopsis here so the reader knows what to expect.</description>
-    </item>
-    
-    <item>
-      <title>New Post</title>
-      <link>https://pixelartrpg.com/07/19/2022/new-post/</link>
-      <pubDate>Tue, 19 Jul 2022 21:39:36 -0500</pubDate>
-      
-      <guid>https://pixelartrpg.com/07/19/2022/new-post/</guid>
-      <description>This is a quick description of the post content for the list view.</description>
+      <guid>https://pixelartrpg.com/07/19/2022/markdown-test/</guid>
+      <description>This is another quick markdown test so I can style the markdown for the site. We want to be able to quickly create blog posts without too much coding.</description>
     </item>
     
   </channel>

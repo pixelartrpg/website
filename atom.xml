@@ -11,8 +11,8 @@
     <docs>http://cyber.harvard.edu/rss/rss.html</docs>
     
     <item>
-      <title>Another New Post</title>
-      <link>https://pixelartrpg.com/07/19/2022/another-new-post/</link>
+      <title>Markdown Test</title>
+      <link>https://pixelartrpg.com/07/19/2022/markdown-test/</link>
       <description>&lt;hr&gt;
 &lt;h2 id=&#34;emphasis&#34;&gt;Emphasis&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;This is bold text&lt;/strong&gt;&lt;/p&gt;
@@ -123,16 +123,8 @@
 &lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;http://dev.nodeca.com&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
 </description>
-      <guid>https://pixelartrpg.com/07/19/2022/another-new-post/</guid>
+      <guid>https://pixelartrpg.com/07/19/2022/markdown-test/</guid>
       <pubDate>Tue, 19 Jul 2022 22:39:36 -0500</pubDate>
-    </item>
-    
-    <item>
-      <title>New Post</title>
-      <link>https://pixelartrpg.com/07/19/2022/new-post/</link>
-      <description></description>
-      <guid>https://pixelartrpg.com/07/19/2022/new-post/</guid>
-      <pubDate>Tue, 19 Jul 2022 21:39:36 -0500</pubDate>
     </item>
     
   </channel>
