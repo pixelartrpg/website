@@ -3,7 +3,21 @@
   
   <url>
     <loc>https://pixelartrpg.com/</loc>
-    <lastmod>2022-07-19T22:39:36-05:00</lastmod>
+    <lastmod>2022-07-20T13:31:30-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pixelartrpg.com/07/20/2022/our-art-style/</loc>
+    <lastmod>2022-07-20T13:31:30-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pixelartrpg.com/writing/</loc>
+    <lastmod>2022-07-20T13:31:30-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -11,25 +25,6 @@
   <url>
     <loc>https://pixelartrpg.com/07/19/2022/markdown-test/</loc>
     <lastmod>2022-07-19T22:39:36-05:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://pixelartrpg.com/writing/</loc>
-    <lastmod>2022-07-19T22:39:36-05:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://pixelartrpg.com/categories/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://pixelartrpg.com/tags/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
