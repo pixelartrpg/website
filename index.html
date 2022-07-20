@@ -37,8 +37,8 @@
 			
 		
 			var intervalId = window.setInterval(function(){
-				const whatWhen = ["Tomorrow", "Today", "Yesterday", "Last Week", "Whenever", "Next Month", "Years Ago", "Forever"];
-				var theRandomNumber = Math.floor(Math.random() * 8) + 1;
+				const whatWhen = ["Tomorrow", "Today", "Yesterday", "Last Week", "Next Week", "Last Month", "Next Month", "Years Ago", "Forever"];
+				var theRandomNumber = Math.floor(Math.random() * 9) + 1;
 				$("#worldWhen").text(whatWhen[theRandomNumber]);
 			}, 2500);
 	
