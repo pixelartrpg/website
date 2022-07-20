@@ -1,0 +1,308 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta property="og:title" content="Pixel Art RPG" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://www.pixelartrpg.com" />
+		<meta property="og:image" content="https://pixelartrpg.com/card.png" />
+		<meta property="og:description" content="Pixel Art RPG: Secret of the Dreamers is a multiplayer RPG in development. It is being stylized in the Retro 16 Bit era of graphics." />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script async data-uid="a9a4702e27" src="https://fierce-motivator-2545.ck.page/a9a4702e27/index.js"></script>
+		<script
+		  src="https://code.jquery.com/jquery-3.6.0.min.js"
+		  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+		  crossorigin="anonymous"></script>
+		<script src="https://kit.fontawesome.com/06f3c5cdb8.js" crossorigin="anonymous"></script>
+		<script>
+			$(document).ready(function(e) {
+				height = "-=125px";
+				$("#animate").animate({
+				top: height,
+				opacity: '0.75',
+				right: '-=20px'
+			  }, 5000, function() {
+			  });
+			});
+			$(document).ready(function(e) {
+				$width = parseInt($("#mainPanel").css("width"),10) + 200;
+				$("#birds").animate({
+				right: '+=' & $width & 'px',
+				opacity: '0',
+				top: '+=250px'
+			  }, 15000, function() {
+			
+			  });
+			});
+		</script>
+		<style>
+			@font-face {
+				font-family: 'mana_seed_staticregular';
+				src: url('/font/mana_seed_static_0.1-webfont.woff2') format('woff2'),
+					 url('/font/mana_seed_static_0.1-webfont.woff') format('woff');
+				font-weight: normal;
+				font-style: normal;
+
+			}
+			.highlight pre
+			{
+				font-size: 15px;
+				font-family: Monospace;
+				background: rgba(0, 0, 0, .5) !important;
+				border:1px solid black;
+				padding:10px;
+			}
+			.article table
+			{
+				min-width: 100%;
+				border-top-width: 0px;
+				border-bottom-width: 1px;
+				border-color: rgb(186 230 253);
+				font-size:9px;
+			}
+			.article table thead
+			{
+				background-color: rgb(186 230 253);
+				padding:5px;
+				border:1px solid rgb(186 230 253);
+			}
+			.article table td
+			{
+				background-color: rgb(30 41 59);
+				color:white;
+				border:1px solid rgb(186 230 253);
+				padding:3px;
+			}
+			.article p
+			{
+				margin:15px !important;
+			}
+			.article ol li
+			{
+				list-style-type: decimal;
+				margin-left:50px;
+				font-size:10px;
+			}
+			.article ul li
+			{
+				list-style-type: square;
+				margin-left:50px;
+				font-size:10px;
+			}
+			.article h1
+			{
+				font-size:16px;
+				margin-top: 10px;
+			}
+			.article h2
+			{
+				font-size:14px;
+				margin-top: 10px;
+			}
+			.article h3
+			{
+				font-size:12px;
+				margin-top: 10px;
+			}
+			.article h4
+			{
+				font-size:10px;
+				margin-top: 10px;
+			}
+			.article h5
+			{
+				font-size:8px;
+				margin-top: 10px;
+			}
+		</style>
+	</head>
+
+	<body class="bg-gray-700 bg-cover bg-center px-8 bg-no-repeat" style="background-image: url('/images/background.png');">
+		<div id="mainPanel" class="flex flex-col mx-auto" style="box-shadow: 0 0 50px #000; max-width:1200px">
+			<div class="w-full bg-black bg-center z-10" style="background-image: url('/images/logo_bg.png'); min-height:125px;">
+				<img id="animate" class="absolute top-32 ml-2 mt-2" style="height: 56px; width: 56px; z-index:-10; opacity: 0.1" src="/images/moon.png">
+				<img id="birds" class="absolute -mt-2" style="height: 100px; width: 100px; z-index:20;transform: scaleX(-1); opacity: 40%" src="/images/birds.gif">
+				<img class="h-20 mt-7 mx-auto z-20" src="/images/logo_text.png">
+			</div>
+			<div id="navbanner" class="banner bg-sky-700 text-white shadow-xl w-full border-t border-b border-black z-20">
+				<div class="pt-2 w-full h-20 lg:h-20 flex content-center">
+					<a href="/index.html" class="cursor-pointer hover:opacity-100 flex-1 opacity-50" style="font-family: 'mana_seed_staticregular', Arial, sans-serif;">
+						<div class="text-center"><i class="fa-solid fa-clouds-moon mx-1 lg:px-4 pt-2 text-2xl"></i></div>
+						<div class="text-center text-xs whitespace-nowrap">Home</div>
+					</a>
+					<a href="/blog.html" class="cursor-pointer hover:opacity-100 flex-1 opacity-100" style="font-family: 'mana_seed_staticregular', Arial, sans-serif;">
+						<div class="text-center"><i class="fa-solid fa-blog mx-1 lg:px-4 pt-2 text-2xl"></i></div>
+						<div class="text-center text-xs whitespace-nowrap"><span class="hidden lg:inline-block">Development</span> Blog</div>
+					</a>
+					<a href="/photos.html" class="cursor-pointer hover:opacity-100 flex-1 opacity-50" style="font-family: 'mana_seed_staticregular', Arial, sans-serif;">
+						<div class="text-center"><i class="far fa-images mx-1 lg:px-4 pt-2 text-2xl"></i></div>
+						<div class="text-center text-xs">Photo<span class="lg:hidden">s</span> <span class="hidden lg:inline-block">Gallery</span></div>
+					</a>
+					<a href="/team.html" class="cursor-pointer hover:opacity-100 flex-1 opacity-50" style="font-family: 'mana_seed_staticregular', Arial, sans-serif;">
+						<div class="text-center"><i class="fas fa-users mx-1 lg:px-4 pt-2 text-2xl"></i></div>
+						<div class="text-center text-xs"><span class="hidden lg:inline-block">Our</span> Team</div>
+					</a>
+				</div>
+			</div>
+			<div class="text-white w-full border-2 border-black p-3 text-[11px] article" style="background: rgba(0, 0, 0, .5);">
+				
+
+
+<div class="mt-12 max-w-7xl mx-auto z-10 px-4 sm:px-6 lg:px-8" style="font-family: 'mana_seed_staticregular', Arial, sans-serif;">
+	<p class="text-[12px] md:text-[20px] text-white">Another New Post</p>
+	<h3 class="text-[8px] md:text-[13px]  text-sky-600">
+		<time>07/19/2022</time>
+		<span> - Dagor</span>
+	</h3>
+	<div class="text-sky-200">
+		<hr>
+<h2 id="emphasis">Emphasis</h2>
+<p><strong>This is bold text</strong></p>
+<p><em>This is italic text</em></p>
+<p><del>Strikethrough</del></p>
+<h2 id="lists">Lists</h2>
+<p>Unordered</p>
+<ul>
+<li>Create a list by starting a line with <code>+</code>, <code>-</code>, or <code>*</code></li>
+<li>Sub-lists are made by indenting 2 spaces:
+<ul>
+<li>Marker character change forces new list start:
+<ul>
+<li>Ac tristique libero volutpat at</li>
+</ul>
+<ul>
+<li>Facilisis in pretium nisl aliquet</li>
+</ul>
+<ul>
+<li>Nulla volutpat aliquam velit</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Very easy!</li>
+</ul>
+<p>Ordered</p>
+<ol>
+<li>Lorem ipsum dolor sit amet</li>
+<li>Consectetur adipiscing elit</li>
+<li>Integer molestie lorem at massa</li>
+</ol>
+<h2 id="code">Code</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">bar</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">bar</span><span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>(<span style="color:#ae81ff">5</span>));
+</span></span></code></pre></div><h2 id="tables">Tables</h2>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td>path to data files to supply the data that will be passed into templates.</td>
+</tr>
+<tr>
+<td>engine</td>
+<td>engine to be used for processing templates. Handlebars is the default.</td>
+</tr>
+<tr>
+<td>ext</td>
+<td>extension to be used for dest files.</td>
+</tr>
+</tbody>
+</table>
+<p>Right aligned columns</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Option</th>
+<th style="text-align:right">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">data</td>
+<td style="text-align:right">path to data files to supply the data that will be passed into templates.</td>
+</tr>
+<tr>
+<td style="text-align:right">engine</td>
+<td style="text-align:right">engine to be used for processing templates. Handlebars is the default.</td>
+</tr>
+<tr>
+<td style="text-align:right">ext</td>
+<td style="text-align:right">extension to be used for dest files.</td>
+</tr>
+</tbody>
+</table>
+<p>Left aligned columns</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">data</td>
+<td style="text-align:left">path to data files to supply the data that will be passed into templates.</td>
+</tr>
+<tr>
+<td style="text-align:left">engine</td>
+<td style="text-align:left">engine to be used for processing templates. Handlebars is the default.</td>
+</tr>
+<tr>
+<td style="text-align:left">ext</td>
+<td style="text-align:left">extension to be used for dest files.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="links">Links</h2>
+<p><a href="http://dev.nodeca.com">Link</a></p>
+
+	</div>
+</div>
+
+
+		</div>
+			<footer class="bg-black w-full py-1">
+			  <div class="max-w-7xl mx-auto py-2 px-1 md:flex md:items-center md:justify-between md:pl-4">
+				<div class="flex justify-center space-x-8 md:space-x-4 md:order-2">
+				  <a href="https://www.facebook.com/pixelartrpg" class="text-gray-400 hover:text-gray-500">
+					<span class="sr-only">Facebook</span>
+					<img src="/images/facebook_pixel_logo.png" class="h-8 w-8 object-contain" />
+				  </a>
+
+				  <a href="https://www.instagram.com/pixelartrpgig/" class="text-gray-400 hover:text-gray-500">
+					<span class="sr-only">Instagram</span>
+					<img src="/images/instagram_pixel_logo.png" class="h-8 w-8 object-contain" />
+				  </a>
+
+				  <a href="https://twitter.com/pixelartrpg" class="text-gray-400 hover:text-gray-500">
+					<span class="sr-only">Twitter</span>
+					<img src="/images/twitter_pixel_logo.png" class="h-8 w-8 object-contain" />
+				  </a>
+
+				  <a href="https://github.com/pixelartrpg" class="text-gray-400 hover:text-gray-500">
+					<span class="sr-only">GitHub</span>
+					<img src="/images/github_pixel_logo.png" class="h-8 w-8 object-contain" />
+				  </a>
+				  <a href="https://blog.pixelartrpg.com" class="text-gray-400 hover:text-gray-500">
+					<span class="sr-only">Blog</span>
+					<img src="/images/blog_pixel_logo.png" class="h-8 w-8 object-contain" />
+				  </a>
+				</div>
+				<div class="mt-2 md:mt-0 md:order-1">
+				  <p class="text-center text-[12px] text-gray-400" style="font-family: 'mana_seed_staticregular', Arial, sans-serif;">&copy; 2022 Pixel Art RPG</p>
+				</div>
+			  </div>
+			</footer>
+		</div>
+	</body>
+</html>
+
