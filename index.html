@@ -1,238 +1,306 @@
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta property="og:title" content="Pixel Art RPG" />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://www.pixelartrpg.com" />
-		<meta property="og:image" content="https://pixelartrpg.com/card.png" />
-		<meta property="og:description" content="Pixel Art RPG: Secret of the Dreamers is a multiplayer RPG in development. It is being stylized in the Retro 16 Bit era of graphics." />
-		<script src="https://cdn.tailwindcss.com"></script>
-		<script async data-uid="a9a4702e27" src="https://fierce-motivator-2545.ck.page/a9a4702e27/index.js"></script>
-		<script
-		  src="https://code.jquery.com/jquery-3.6.0.min.js"
-		  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-		  crossorigin="anonymous"></script>
-		<script src="https://kit.fontawesome.com/06f3c5cdb8.js" crossorigin="anonymous"></script>
-		<script>
-			$(document).ready(function(e) {
-				height = "-=100px";
-				$("#animate").animate({
-				top: height,
-				opacity: '0.75',
-				right: '-=20px'
-			  }, 5000, function() {
-			  });
-			});
-			$(document).ready(function(e) {
-				$width = parseInt($("#mainPanel").css("width"),10) + 200;
-				$("#birds").animate({
-				right: '+=' & $width & 'px',
-				opacity: '0',
-				top: '+=250px'
-			  }, 15000, function() {
-			
-			  });
-			});
-			
-		
-			var intervalId = window.setInterval(function(){
-				const whatWhen = ["Tomorrow", "Today", "Yesterday", "Last Week", "Next Week", "Last Month", "Next Month", "Years Ago", "Forever"];
-				var theRandomNumber = Math.floor(Math.random() * 9) + 1;
-				$("#worldWhen").text(whatWhen[theRandomNumber]);
-			}, 2500);
-	
-		
-		</script>
-		<link rel="stylesheet" href="styles.css">
-		<style>
-			@font-face {
-				font-family: 'mana_seed_staticregular';
-				src: url('/font/mana_seed_static_0.1-webfont.woff2') format('woff2'),
-					 url('/font/mana_seed_static_0.1-webfont.woff') format('woff');
-				font-weight: normal;
-				font-style: normal;
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Pixel Art RPG" property="og:title"/>
+    <meta content="website" property="og:type"/>
+    <meta content="https://www.pixelartrpg.com" property="og:url"/>
+    <meta content="https://pixelartrpg.com/card.png" property="og:image"/>
+    <meta content="Pixel Art RPG: Secret of the Dreamers is a multiplayer RPG in development. It is being stylized in the Retro 16 Bit era of graphics." property="og:description"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script async data-uid="a9a4702e27" src="https://fierce-motivator-2545.ck.page/a9a4702e27/index.js"></script>
+    <script
+            crossorigin="anonymous"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/06f3c5cdb8.js"></script>
+    <script>
+        $(document).ready(function (e) {
+            height = "-=100px";
+            $("#animate").animate({
+                top: height,
+                opacity: '0.75',
+                right: '-=20px'
+            }, 5000, function () {
+            });
+        });
+        $(document).ready(function (e) {
+            $width = parseInt($("#mainPanel").css("width"), 10) + 200;
+            $("#birds").animate({
+                right: '+=' & $width & 'px',
+                opacity: '0',
+                top: '+=250px'
+            }, 15000, function () {
 
-			}
-			@font-face {
-				font-family: 'silk';
-				src: url('/font/silkscreen_normal_macroman/slkscr-webfont.eot');
-				src: url('/font/silkscreen_normal_macroman/slkscr-webfont.eot?#iefix') format('embedded-opentype'),
-					 url('/font/silkscreen_normal_macroman/slkscr-webfont.woff2') format('woff2'),
-					 url('/font/silkscreen_normal_macroman/slkscr-webfont.woff') format('woff'),
-					 url('/font/silkscreen_normal_macroman/slkscr-webfont.ttf') format('truetype'),
-					 url('/font/silkscreen_normal_macroman/slkscr-webfont.svg#silkscreennormal') format('svg');
-				font-weight: normal;
-				font-style: normal;
+            });
+        });
 
-			}
-		</style>
-	</head>
 
-	<body class="bg-gray-700 bg-cover bg-center px-8 bg-no-repeat" style="background-image: url('/images/background.png');">
-		<div id="mainPanel" class="flex flex-col mx-auto h-full" style="box-shadow: 0 0 50px #000; max-width:1200px">
-			<div class="w-full bg-black bg-center z-10" style="background-image: url('/images/logo_bg.png'); min-height:125px;">
-				<img id="animate" class="absolute top-24 ml-2 mt-2" style="height: 56px; width: 56px; z-index:-10; opacity: 0" src="/images/moon.png">
-				<img id="birds" class="absolute -mt-2" style="height: 100px; width: 100px; z-index:20;transform: scaleX(-1); opacity: 40%" src="/images/birds.gif">
-				<img class="h-20 mt-7 mx-auto z-20" src="/images/logo_text.png">
-			</div>
-			<div id="navbanner" class="banner bg-sky-700 text-white w-full border-t border-b border-black z-20">
-				<div class="pt-[5px] md:pt-[3px] w-full h-8 md:h-10 flex content-center">
-					<a href="index.html" class="cursor-pointer hover:opacity-100 flex-1 opacity-100" style="font-family: 'silk', Arial, sans-serif;">
-						<div class="text-center text-[14px] md:text-[24px] whitespace-nowrap">Home</div>
-					</a>
-					<a href="plans.html" class="cursor-pointer hover:opacity-100 flex-1 opacity-50" style="font-family: 'silk', Arial, sans-serif;">
-						<div class="text-center text-[14px] md:text-[24px] whitespace-nowrap">Plans</div>
-					</a>
-					<a href="blog.html" class="cursor-pointer hover:opacity-100 flex-1 opacity-50" style="font-family: 'silk', Arial, sans-serif;">
-						<div class="text-center text-[14px] md:text-[24px] whitespace-nowrap"><span class="hidden lg:inline-block">Dev</span> Blog</div>
-					</a>
-					<a href="photos.html" class="cursor-pointer hover:opacity-100 flex-1 opacity-50" style="font-family: 'silk', Arial, sans-serif;">
-						<div class="text-center text-[14px] md:text-[24px]">Photos</div>
-					</a>
-					<a href="team.html" class="cursor-pointer hover:opacity-100 flex-1 opacity-50" style="font-family: 'silk', Arial, sans-serif;">
-						<div class="text-center text-[14px] md:text-[24px]"><span class="hidden lg:inline-block">Our</span> Team</div>
-					</a>
-				</div>
-			</div>
-			<main class="flex-grow text-white w-full border-2 border-black" style="background: rgba(0, 0, 0, .5);font-family: 'mana_seed_staticregular', Arial, sans-serif;">
-				<div class="pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-48">
-				  <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-24">
-					<div>
-					  <div class="mt-2">
-						<div>
-						  <a href="#" class="inline-flex space-x-4">
-							<span class="bg-sky-50 px-2.5 py-1 mr-2 text-xs text-sky-800 uppercase whitespace-nowrap"> What's new </span>
-							<a href="blog.html" class="inline-flex items-center text-xs text-sky-200 space-x-1">
-							  <span class="hidden md:inline-flex">Developer blog setup</span>
-							  <span class="md:hidden">Read More</span>
-							  <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-								<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-							  </svg>
-							</a>
-						  </a>
-						</div>
-						<div class="mt-6 sm:max-w-xl text-center md:text-left">
-						  <h1 class="text-4xl text-sky-300 tracking-wide uppercase">Take a step into <span class="text-sky-100">dreams</span></h1>
-						  <h1 class="text-2xl text-sky-300 tracking-wide uppercase ml-2">and rebuild the <span class="text-sky-100">world</span> <span id="worldWhen">yesterday</span></h1>
-						  <div class="mt-6 mb-3 text-xs text-sky-300 border leading-5 p-4" style="background-color: #262c3c;border-color:#80848f">
-							  <span class="text-sky-100">Pixel Art RPG: Secret of the Dreamers</span> is currently in development by a husband and wife duo. 
-							  It is being developed using the Godot game engine and graphics are being created in a 16 bit pixelated art style.
-							  Join us as we bring our little <span class="text-sky-100">dream</span> to life!<br><br>
-							  Sign up to recieve email updates below or follow us on social media<br><br>
-						  </div>
-						  <div class="w-full flex flex-row-reverse shadow-xl">
-							  <div class="flex py-2 justify-end bg-sky-900 text-white w-fit p-2 -mt-9 mr-6 border" style="border-color:#80848f">
-								<a href="https://www.facebook.com/pixelartrpg" target="_blank" class="text-gray-400 hover:text-gray-500 mx-2">
-									<span class="sr-only">Facebook</span>
-									<i class="fa-brands fa-facebook-f text-3xl text-sky-200"></i>
-								</a>
-								<a href="https://www.reddit.com/r/pixelartrpg/" target="_blank" class="text-gray-400 hover:text-gray-500 mx-2">
-									<span class="sr-only">Reddit</span>
-									<i class="fa-brands fa-reddit-alien text-3xl text-sky-200"></i>
-								</a>
-								<a href="https://twitter.com/pixelartrpg" target="_blank" class="text-gray-400 hover:text-gray-500 mx-2">
-									<span class="sr-only">Twitter</span>
-									<i class="fa-brands fa-twitter text-3xl text-sky-200"></i>
-								</a>
-								<a href="https://github.com/pixelartrpg" target="_blank" class="text-gray-400 hover:text-gray-500 mx-2">
-									<span class="sr-only">GitHub</span>
-									<i class="fa-brands fa-github text-3xl text-sky-200"></i>
-								</a>
-							  </div>
-						  </div>
-						</div>
-					  </div>
-					</div>
-				  </div>
+        var intervalId = window.setInterval(function () {
+            const whatWhen = ["Tomorrow", "Today", "Yesterday", "Last Week", "Next Week", "Last Month", "Next Month", "Years Ago", "Forever"];
+            var theRandomNumber = Math.floor(Math.random() * 9) + 1;
+            $("#worldWhen").text(whatWhen[theRandomNumber]);
+        }, 2500);
 
-				  <div class="sm:mx-auto sm:max-w-3xl sm:px-6">
-					<div class="py-12 sm:relative sm:mt-12 sm:py-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-					  <div class="hidden sm:block">
-						<svg class="absolute top-8 right-1/2 -mr-3 lg:m-0 lg:left-0" width="404" height="392" fill="none" viewBox="0 0 404 392">
-						  <defs>
-							<pattern id="837c3e70-6c3a-44e6-8854-cc48c737b659" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-							  <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
-							</pattern>
-						  </defs>
-						  <rect width="404" height="392" fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)" />
-						</svg>
-					  </div>
-					  <div class="relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:max-w-none lg:h-full lg:pl-12">
-						<img class="w-full shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none hidden sm:block" src="/images/godot.jpg" alt="">
-					  </div>
-					</div>
-				  </div>
-				</div>
-				<div class="relative mt-8 sm:py-16 mb-8">
-				  <div aria-hidden="true" class="hidden sm:block">
-					<svg class="absolute top-8 left-1/2 -ml-3" width="404" height="392" fill="none" viewBox="0 0 404 392">
-					  <defs>
-						<pattern id="8228f071-bcee-4ec8-905a-2a059a2cc4fb" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-						  <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
-						</pattern>
-					  </defs>
-					  <rect width="404" height="392" fill="url(#8228f071-bcee-4ec8-905a-2a059a2cc4fb)" />
-					</svg>
-				  </div>
-				  <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-					<div class="relative px-6 py-10 bg-sky-500 overflow-hidden shadow-xl sm:px-12 sm:py-20">
-					  <div aria-hidden="true" class="absolute inset-0 -mt-72 sm:-mt-32 md:mt-0">
-						<svg class="absolute inset-0 h-full w-full" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1463 360">
-						  <path class="text-sky-400 text-opacity-40" fill="currentColor" d="M-82.673 72l1761.849 472.086-134.327 501.315-1761.85-472.086z" />
-						  <path class="text-sky-600 text-opacity-40" fill="currentColor" d="M-217.088 544.086L1544.761 72l134.327 501.316-1761.849 472.086z" />
-						</svg>
-					  </div>
-					  <div class="relative">
-						<div class="text-center md:text-left mb-3">
-						  <h2 class="text-xl md:text-2xl text-white">Subscribe today to get notifications</h2>
-						  <p class="mt-6 mx-auto max-w-2xl text-xs text-sky-100">Enter your email below to get notified when we release major updates about the game. We will not trade or sell your information, this is solely for updates to Pixel Art RPG progress.</p>
-						</div>
-						<script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
-							  <form action="https://app.convertkit.com/forms/3449165/subscriptions" class="seva-form formkit-form mx-auto text-xs" method="post" data-sv-form="3449165" data-uid="a9a4702e27" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;fathom&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null,&quot;sparkloop&quot;:null,&quot;googletagmanager&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;powered_by&quot;:{&quot;show&quot;:true,&quot;url&quot;:&quot;https://convertkit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;show&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;display_in&quot;:&quot;top&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800"><div data-style="clean"><ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul><div data-element="fields" data-stacked="false" class="seva-fields formkit-fields"><div class="formkit-field"><input class="formkit-input" name="email_address" aria-label="Email" placeholder="Email" required="" type="email" style="color: rgb(0, 0, 0); border-color: rgb(227, 227, 227); border-radius: 4px; font-weight: 400;"></div><button data-element="submit" class="formkit-submit formkit-submit" style="color: rgb(255, 255, 255); background-color: rgb(22, 119, 190); border-radius: 4px; font-weight: 400;"><div class="formkit-spinner"><div></div><div></div><div></div></div><span class="">Subscribe</span></button></div><div class="formkit-powered-by-convertkit-container"></div></div
-							  </form>
-					  </div>
-					</div>
-				  </div>
-				</div>				
-			</main>
-			<footer class="bg-black border border-black w-full p-1">
-			  <div class="max-w-7xl mx-auto py-2 px-1 md:flex md:items-center md:justify-between md:pl-4">
-				<div class="flex justify-center space-x-8 md:space-x-4 md:order-2">
-				  <a href="https://www.facebook.com/pixelartrpg" target="_blank" class="text-gray-400 hover:text-gray-500">
-					<span class="sr-only">Facebook</span>
-					<i class="fa-brands fa-facebook-f text-2xl text-sky-200"></i>
-				  </a>
 
-				  <a href="https://www.reddit.com/r/pixelartrpg/" target="_blank" class="text-gray-400 hover:text-gray-500 mx-2">
-					<span class="sr-only">Reddit</span>
-					<i class="fa-brands fa-reddit-alien text-2xl text-sky-200"></i>
-				  </a>
+    </script>
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'mana_seed_staticregular';
+            src: url('/font/mana_seed_static_0.1-webfont.woff2') format('woff2'),
+            url('/font/mana_seed_static_0.1-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
 
-				  <a href="https://twitter.com/pixelartrpg" target="_blank" class="text-gray-400 hover:text-gray-500">
-					<span class="sr-only">Twitter</span>
-					<i class="fa-brands fa-twitter text-2xl text-sky-200"></i>
-				  </a>
+        }
 
-				  <a href="https://github.com/pixelartrpg" target="_blank" class="text-gray-400 hover:text-gray-500">
-					<span class="sr-only">GitHub</span>
-					<i class="fa-brands fa-github text-2xl text-sky-200"></i>
-				  </a>
-				</div>
-				<div class="mt-2 md:mt-0 md:order-1">
-				  <p class="text-center text-[11px] text-sky-200" style="font-family: 'mana_seed_staticregular', Arial, sans-serif;">&copy; 2022 Pixel Art RPG</p>
-				</div>
-			  </div>
-			</footer>
-			<!--
-			<div class="flex items-center m-2 fixed bottom-0 left-0 border border-gray-400 rounded p-2 bg-gray-300 text-red-600 text-xl z-50 opacity-100 cursor-pointer">
-				<span class="ml-1 sm:hidden md:hidden lg:hidden xl:hidden">xs</span>
-				<span class="ml-1 hidden sm:inline md:hidden font-extrabold">sm</span>
-				<span class="ml-1 hidden md:inline lg:hidden font-extrabold">md</span>
-				<span class="ml-1 hidden lg:inline xl:hidden font-extrabold">lg</span>
-				<span class="ml-1 hidden xl:inline font-extrabold">xl</span>
-			</div>
-			-->
-		</div>
-	</body>
+        @font-face {
+            font-family: 'silk';
+            src: url('/font/silkscreen_normal_macroman/slkscr-webfont.eot');
+            src: url('/font/silkscreen_normal_macroman/slkscr-webfont.eot?#iefix') format('embedded-opentype'),
+            url('/font/silkscreen_normal_macroman/slkscr-webfont.woff2') format('woff2'),
+            url('/font/silkscreen_normal_macroman/slkscr-webfont.woff') format('woff'),
+            url('/font/silkscreen_normal_macroman/slkscr-webfont.ttf') format('truetype'),
+            url('/font/silkscreen_normal_macroman/slkscr-webfont.svg#silkscreennormal') format('svg');
+            font-weight: normal;
+            font-style: normal;
+
+        }
+    </style>
+</head>
+
+<body class="bg-gray-700 bg-cover bg-center px-8 bg-no-repeat" style="background-image: url('/images/background.png');">
+<div class="flex flex-col mx-auto h-full" id="mainPanel" style="box-shadow: 0 0 50px #000; max-width:1200px">
+    <div class="w-full bg-black bg-center z-10" style="background-image: url('/images/logo_bg.png'); min-height:125px;">
+        <img class="absolute top-24 ml-2 mt-2" id="animate" src="/images/moon.png"
+             style="height: 56px; width: 56px; z-index:-10; opacity: 0">
+        <img class="absolute -mt-2" id="birds" src="/images/birds.gif"
+             style="height: 100px; width: 100px; z-index:20;transform: scaleX(-1); opacity: 40%">
+        <img class="h-20 mt-7 mx-auto z-20" src="/images/logo_text.png">
+    </div>
+    <div class="banner bg-sky-700 text-white w-full border-t border-b border-black z-20" id="navbanner">
+        <div class="pt-[5px] md:pt-[3px] w-full h-8 md:h-10 flex content-center">
+            <a class="cursor-pointer hover:opacity-100 flex-1 opacity-100" href="index.html"
+               style="font-family: 'silk', Arial, sans-serif;">
+                <div class="text-center text-[14px] md:text-[24px] whitespace-nowrap">Home</div>
+            </a>
+            <a class="cursor-pointer hover:opacity-100 flex-1 opacity-50" href="plans.html"
+               style="font-family: 'silk', Arial, sans-serif;">
+                <div class="text-center text-[14px] md:text-[24px] whitespace-nowrap">Plans</div>
+            </a>
+            <a class="cursor-pointer hover:opacity-100 flex-1 opacity-50" href="blog.html"
+               style="font-family: 'silk', Arial, sans-serif;">
+                <div class="text-center text-[14px] md:text-[24px] whitespace-nowrap"><span
+                        class="hidden lg:inline-block">Dev</span> Blog
+                </div>
+            </a>
+            <a class="cursor-pointer hover:opacity-100 flex-1 opacity-50" href="photos.html"
+               style="font-family: 'silk', Arial, sans-serif;">
+                <div class="text-center text-[14px] md:text-[24px]">Photos</div>
+            </a>
+            <a class="cursor-pointer hover:opacity-100 flex-1 opacity-50" href="team.html"
+               style="font-family: 'silk', Arial, sans-serif;">
+                <div class="text-center text-[14px] md:text-[24px]"><span class="hidden lg:inline-block">Our</span> Team
+                </div>
+            </a>
+        </div>
+    </div>
+    <main class="flex-grow text-white w-full border-2 border-black"
+          style="background: rgba(0, 0, 0, .5);font-family: 'mana_seed_staticregular', Arial, sans-serif;">
+        <div class="pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-48">
+            <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-24">
+                <div>
+                    <div class="mt-2">
+                        <div>
+                            <a class="inline-flex space-x-4" href="#">
+                                <span class="bg-sky-50 px-2.5 py-1 mr-2 text-xs text-sky-800 uppercase whitespace-nowrap"> What's new </span>
+                                <a class="inline-flex items-center text-xs text-sky-200 space-x-1" href="blog.html">
+                                    <span class="hidden md:inline-flex">Developer blog setup</span>
+                                    <span class="md:hidden">Read More</span>
+                                    <svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path clip-rule="evenodd"
+                                              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                              fill-rule="evenodd"/>
+                                    </svg>
+                                </a>
+                            </a>
+                        </div>
+                        <div class="mt-6 sm:max-w-xl text-center md:text-left">
+                            <h1 class="text-4xl text-sky-300 tracking-wide uppercase">Take a step into <span
+                                    class="text-sky-100">dreams</span></h1>
+                            <h1 class="text-2xl text-sky-300 tracking-wide uppercase ml-2">and rebuild the <span
+                                    class="text-sky-100">world</span> <span id="worldWhen">yesterday</span></h1>
+                            <div class="mt-6 mb-3 text-xs text-sky-300 border leading-5 p-4"
+                                 style="background-color: #262c3c;border-color:#80848f">
+                                <span class="text-sky-100">Pixel Art RPG: Secret of the Dreamers</span> is currently in
+                                development by a husband and wife duo.
+                                It is being developed using the Godot game engine and graphics are being created in a 16
+                                bit pixelated art style.
+                                Join us as we bring our little <span class="text-sky-100">dream</span> to life!<br><br>
+                                Sign up to recieve email updates below or follow us on social media<br><br>
+                            </div>
+                            <div class="w-full flex flex-row-reverse shadow-xl">
+                                <div class="flex py-2 justify-end bg-sky-900 text-white w-fit p-2 -mt-9 mr-6 border"
+                                     style="border-color:#80848f">
+                                    <a class="text-gray-400 hover:text-gray-500 mx-2"
+                                       href="https://www.facebook.com/pixelartrpg" target="_blank">
+                                        <span class="sr-only">Facebook</span>
+                                        <i class="fa-brands fa-facebook-f text-3xl text-sky-200"></i>
+                                    </a>
+                                    <a class="text-gray-400 hover:text-gray-500 mx-2"
+                                       href="https://www.reddit.com/r/pixelartrpg/" target="_blank">
+                                        <span class="sr-only">Reddit</span>
+                                        <i class="fa-brands fa-reddit-alien text-3xl text-sky-200"></i>
+                                    </a>
+                                    <a class="text-gray-400 hover:text-gray-500 mx-2"
+                                       href="https://twitter.com/pixelartrpg" target="_blank">
+                                        <span class="sr-only">Twitter</span>
+                                        <i class="fa-brands fa-twitter text-3xl text-sky-200"></i>
+                                    </a>
+                                    <a class="text-gray-400 hover:text-gray-500 mx-2"
+                                       href="https://github.com/pixelartrpg" target="_blank">
+                                        <span class="sr-only">GitHub</span>
+                                        <i class="fa-brands fa-github text-3xl text-sky-200"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sm:mx-auto sm:max-w-3xl sm:px-6">
+                <div class="py-12 sm:relative sm:mt-12 sm:py-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+                    <div class="hidden sm:block">
+                        <svg class="absolute top-8 right-1/2 -mr-3 lg:m-0 lg:left-0" fill="none" height="392"
+                             viewBox="0 0 404 392" width="404">
+                            <defs>
+                                <pattern height="20" id="837c3e70-6c3a-44e6-8854-cc48c737b659"
+                                         patternUnits="userSpaceOnUse" width="20" x="0" y="0">
+                                    <rect class="text-gray-200" fill="currentColor" height="4" width="4" x="0" y="0"/>
+                                </pattern>
+                            </defs>
+                            <rect fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)" height="392" width="404"/>
+                        </svg>
+                    </div>
+                    <div class="relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:max-w-none lg:h-full lg:pl-12">
+                        <img alt=""
+                             class="w-full shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none hidden sm:block"
+                             src="/images/godot.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Blue Box -->
+        <div class="relative mt-8 sm:py-16 mb-8">
+            <!-- Dots Behind Blue Box-->
+            <div aria-hidden="true" class="hidden sm:block">
+                <svg class="absolute top-8 left-1/2 -ml-3" fill="none" height="392" viewBox="0 0 404 392" width="404">
+                    <defs>
+                        <pattern height="20" id="8228f071-bcee-4ec8-905a-2a059a2cc4fb" patternUnits="userSpaceOnUse"
+                                 width="20" x="0" y="0">
+                            <rect class="text-gray-200" fill="currentColor" height="4" width="4" x="0" y="0"/>
+                        </pattern>
+                    </defs>
+                    <rect fill="url(#8228f071-bcee-4ec8-905a-2a059a2cc4fb)" height="392" width="404"/>
+                </svg>
+            </div>
+
+            <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+                <div class="relative px-6 py-10 bg-sky-500 overflow-hidden shadow-xl sm:px-12 sm:py-20">
+                    <div aria-hidden="true" class="absolute inset-0 -mt-72 sm:-mt-32 md:mt-0">
+                        <svg class="absolute inset-0 h-full w-full" fill="none" preserveAspectRatio="xMidYMid slice"
+                             viewBox="0 0 1463 360" xmlns="http://www.w3.org/2000/svg">
+                            <path class="text-sky-400 text-opacity-40"
+                                  d="M-82.673 72l1761.849 472.086-134.327 501.315-1761.85-472.086z"
+                                  fill="currentColor"/>
+                            <path class="text-sky-600 text-opacity-40"
+                                  d="M-217.088 544.086L1544.761 72l134.327 501.316-1761.849 472.086z"
+                                  fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="relative">
+                        <div class="text-center md:text-left mb-3">
+                            <h2 class="text-xl md:text-2xl text-sky-100">Subscribe today to get notifications</h2>
+                            <p class="mt-6 mx-auto max-w-2xl text-xs text-sky-200">Enter your email below to get
+                                notified when we release major updates about the game. We will not trade or sell your
+                                information, this is solely for updates to Pixel Art RPG progress.</p>
+                        </div>
+                        <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+                        <form action="https://app.convertkit.com/forms/3449165/subscriptions"
+                              class="seva-form formkit-form mx-auto text-xs" data-format="inline"
+                              data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;fathom&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null,&quot;sparkloop&quot;:null,&quot;googletagmanager&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;powered_by&quot;:{&quot;show&quot;:true,&quot;url&quot;:&quot;https://convertkit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;show&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;display_in&quot;:&quot;top&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}"
+                              data-sv-form="3449165" data-uid="a9a4702e27" data-version="5" method="post"
+                              min-width="400 500 600 700 800">
+                            <div data-style="clean">
+                                <ul class="formkit-alert formkit-alert-error" data-element="errors"
+                                    data-group="alert"></ul>
+                                <div class="seva-fields formkit-fields" data-element="fields" data-stacked="false">
+                                    <div class="formkit-field">
+										<input aria-label="Email" class="formkit-input"
+										  name="email_address" placeholder="Email"
+										  required=""
+										  style="color: rgb(0, 0, 0); border-color: rgb(227, 227, 227); border-radius: 4px; font-weight: 400;"
+										  type="email">
+									</div>
+                                    <button class="formkit-submit formkit-submit" data-element="submit" style="color: rgb(255, 255, 255); background-color: rgb(22, 119, 190); border-radius: 4px; font-weight: 400;">
+                                        <div class="formkit-spinner">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <span class="">Subscribe</span></button>
+                                </div>
+                                <div class="formkit-powered-by-convertkit-container"></div>
+                            </div
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-black border border-black w-full p-1">
+        <div class="max-w-7xl mx-auto py-2 px-1 md:flex md:items-center md:justify-between md:pl-4">
+            <div class="flex justify-center space-x-8 md:space-x-4 md:order-2">
+                <a class="text-gray-400 hover:text-gray-500" href="https://www.facebook.com/pixelartrpg"
+                   target="_blank">
+                    <span class="sr-only">Facebook</span>
+                    <i class="fa-brands fa-facebook-f text-2xl text-sky-200"></i>
+                </a>
+
+                <a class="text-gray-400 hover:text-gray-500 mx-2" href="https://www.reddit.com/r/pixelartrpg/"
+                   target="_blank">
+                    <span class="sr-only">Reddit</span>
+                    <i class="fa-brands fa-reddit-alien text-2xl text-sky-200"></i>
+                </a>
+
+                <a class="text-gray-400 hover:text-gray-500" href="https://twitter.com/pixelartrpg" target="_blank">
+                    <span class="sr-only">Twitter</span>
+                    <i class="fa-brands fa-twitter text-2xl text-sky-200"></i>
+                </a>
+
+                <a class="text-gray-400 hover:text-gray-500" href="https://github.com/pixelartrpg" target="_blank">
+                    <span class="sr-only">GitHub</span>
+                    <i class="fa-brands fa-github text-2xl text-sky-200"></i>
+                </a>
+            </div>
+            <div class="mt-2 md:mt-0 md:order-1">
+                <p class="text-center text-[11px] text-sky-200"
+                   style="font-family: 'mana_seed_staticregular', Arial, sans-serif;">&copy; 2022 Pixel Art RPG</p>
+            </div>
+        </div>
+    </footer>
+    <!--
+    <div class="flex items-center m-2 fixed bottom-0 left-0 border border-gray-400 rounded p-2 bg-gray-300 text-red-600 text-xl z-50 opacity-100 cursor-pointer">
+        <span class="ml-1 sm:hidden md:hidden lg:hidden xl:hidden">xs</span>
+        <span class="ml-1 hidden sm:inline md:hidden font-extrabold">sm</span>
+        <span class="ml-1 hidden md:inline lg:hidden font-extrabold">md</span>
+        <span class="ml-1 hidden lg:inline xl:hidden font-extrabold">lg</span>
+        <span class="ml-1 hidden xl:inline font-extrabold">xl</span>
+    </div>
+    -->
+</div>
+</body>
 </html>
