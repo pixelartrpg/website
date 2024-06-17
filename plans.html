@@ -1,535 +1,1180 @@
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta property="og:title" content="Pixel Art RPG" />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://www.pixelartrpg.com" />
-		<meta property="og:image" content="https://pixelartrpg.com/card.png" />
-		<meta property="og:description" content="Pixel Art RPG: Secret of the Dreamers is a multiplayer RPG in development. It is being stylized in the Retro 16 Bit era of graphics." />
-		<script src="https://cdn.tailwindcss.com"></script>
-		<script async data-uid="a9a4702e27" src="https://fierce-motivator-2545.ck.page/a9a4702e27/index.js"></script>
-		<script
-		  src="https://code.jquery.com/jquery-3.6.0.min.js"
-		  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-		  crossorigin="anonymous"></script>
-		<script src="https://kit.fontawesome.com/06f3c5cdb8.js" crossorigin="anonymous"></script>
-		<script>
-			$(document).ready(function(e) {
-				height = "-=100px";
-				$("#animate").animate({
-				top: height,
-				opacity: '0.75',
-				right: '-=20px'
-			  }, 5000, function() {
-			  });
-			});
-			$(document).ready(function(e) {
-				$width = parseInt($("#mainPanel").css("width"),10) + 200;
-				$("#birds").animate({
-				right: '+=' & $width & 'px',
-				opacity: '0',
-				top: '+=250px'
-			  }, 15000, function() {
-			
-			  });
-			});
-		</script>
-		<link rel="stylesheet" href="styles.css">
-		<style>
-			@font-face {
-				font-family: 'mana_seed_staticregular';
-				src: url('/font/mana_seed_static_0.1-webfont.woff2') format('woff2'),
-					 url('/font/mana_seed_static_0.1-webfont.woff') format('woff');
-				font-weight: normal;
-				font-style: normal;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Pixel Art RPG"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://www.pixelartrpg.com"/>
+    <meta property="og:image" content="https://pixelartrpg.com/card.png"/>
+    <meta property="og:description"
+          content="Pixel Art RPG: Secret of the Dreamers is a multiplayer RPG in development. It is being stylized in the Retro 16 Bit era of graphics."/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script async data-uid="a9a4702e27" src="https://fierce-motivator-2545.ck.page/a9a4702e27/index.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/06f3c5cdb8.js" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function (e) {
+            height = "-=100px";
+            $("#animate").animate({
+                top: height,
+                opacity: '0.75',
+                right: '-=20px'
+            }, 5000, function () {
+            });
+        });
+        $(document).ready(function (e) {
+            $width = parseInt($("#mainPanel").css("width"), 10) + 200;
+            $("#birds").animate({
+                right: '+=' & $width & 'px',
+                opacity: '0',
+                top: '+=250px'
+            }, 15000, function () {
 
-			}
-			@font-face {
-				font-family: 'silk';
-				src: url('/font/silkscreen_normal_macroman/slkscr-webfont.eot');
-				src: url('/font/silkscreen_normal_macroman/slkscr-webfont.eot?#iefix') format('embedded-opentype'),
-					 url('/font/silkscreen_normal_macroman/slkscr-webfont.woff2') format('woff2'),
-					 url('/font/silkscreen_normal_macroman/slkscr-webfont.woff') format('woff'),
-					 url('/font/silkscreen_normal_macroman/slkscr-webfont.ttf') format('truetype'),
-					 url('/font/silkscreen_normal_macroman/slkscr-webfont.svg#silkscreennormal') format('svg');
-				font-weight: normal;
-				font-style: normal;
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @font-face {
+            font-family: 'mana_seed_staticregular';
+            src: url('/font/mana_seed_static_0.1-webfont.woff2') format('woff2'),
+            url('/font/mana_seed_static_0.1-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
 
-			}
-			li {
-				list-style-type: circle;
-				margin-left:25px;
-				padding:1px;
-			}
-		</style>
-	</head>
+        }
 
-	<body class="bg-gray-700 bg-cover bg-center px-8 bg-no-repeat" style="background-image: url('/images/background.png');">
-		<div id="mainPanel" class="flex flex-col mx-auto h-full" style="box-shadow: 0 0 50px #000; max-width:1200px">
-			<div class="w-full bg-black bg-center z-10" style="background-image: url('/images/logo_bg.png'); min-height:125px;">
-				<img id="animate" class="absolute top-24 ml-2 mt-2" style="height: 56px; width: 56px; z-index:-10; opacity: 0" src="/images/moon.png">
-				<img id="birds" class="absolute -mt-2" style="height: 100px; width: 100px; z-index:20;transform: scaleX(-1); opacity: 40%" src="/images/birds.gif">
-				<img class="h-20 mt-7 mx-auto z-20" src="/images/logo_text.png">
-			</div>
-			<div id="navbanner" class="banner bg-sky-700 text-white w-full border-t border-b border-black z-20">
-				<div class="pt-[5px] md:pt-[3px] w-full h-8 md:h-10 flex content-center">
-					<a href="index.html" class="cursor-pointer hover:opacity-100 flex-1 opacity-50" style="font-family: 'silk', Arial, sans-serif;">
-						<div class="text-center text-[14px] md:text-[24px] whitespace-nowrap">Home</div>
-					</a>
-					<a href="plans.html" class="cursor-pointer hover:opacity-100 flex-1 opacity-100" style="font-family: 'silk', Arial, sans-serif;">
-						<div class="text-center text-[14px] md:text-[24px] whitespace-nowrap">Plans</div>
-					</a>
-					<a href="blog.html" class="cursor-pointer hover:opacity-100 flex-1 opacity-50" style="font-family: 'silk', Arial, sans-serif;">
-						<div class="text-center text-[14px] md:text-[24px] whitespace-nowrap"><span class="hidden lg:inline-block">Dev</span> Blog</div>
-					</a>
-					<a href="photos.html" class="cursor-pointer hover:opacity-100 flex-1 opacity-50" style="font-family: 'silk', Arial, sans-serif;">
-						<div class="text-center text-[14px] md:text-[24px]">Photos</div>
-					</a>
-					<a href="team.html" class="cursor-pointer hover:opacity-100 flex-1 opacity-50" style="font-family: 'silk', Arial, sans-serif;">
-						<div class="text-center text-[14px] md:text-[24px]"><span class="hidden lg:inline-block">Our</span> Team</div>
-					</a>
-				</div>
-			</div>
-			<main class="flex-grow text-white w-full border-2 border-black px-4 py-1" style="background: rgba(0, 0, 0, .5);">
-				<div class="w-full text-center mt-2 mb-5 italic" style="font-family: 'silk', 'mana_seed_staticregular', sans-serif;">
-					*Any information on this page is subject to change at anytime
-				</div>
-				<!-- Panel -->
-				<div class="w-full p-4 text-[10px] mb-10" style="background: rgba(0, 0, 0, .5);font-family: 'mana_seed_staticregular', sans-serif;">
-					<div class="bg-sky-800 text-white w-fit p-2 -mt-8 shadow-xl">
-						Game Mechanics - Overview
-					</div>
-					<div class="mt-5 ml-2">
-						This is a high level bullet list of planned systems. Each of these will get thier own section below as they are flushed out. Some wont make the list and will be dropped. New ones may be added as time goes.
-						<ul>
-							<li>Character Races</li>
-							<li>Quest System</li>
-							<li>Time Travel Mechanic</li>
-							<li>Faction\Reputation System</li>
-							<li>NPC\Pet\Summon Party System</li>
-							<li>Fishing System</li>
-							<li>Farming System</li>
-							<li>Item System (Prefix,Suffix)**</li>
-							<li>Town Building\Planning System</li>
-							<li>Professions\Crafting System</li>
-							<li>Casino\Arcade System</li>
-							<li>Mayor\Castle Owner System</li>
-							<li>Multi-player Couch Co-Op Play</li>
-							<li>Multi-player Network Play</li>
-							<li>Indepth Story</li>
-						</ul>
-						<br>
-						<span class="italic">** On short list to be removed</span>
-					</div>
-				</div>
-				<!-- Panel -->
-				<div class="w-full p-4 text-[10px] mb-10" style="background: rgba(0, 0, 0, .5);font-family: 'mana_seed_staticregular', sans-serif;">
-					<div class="bg-sky-800 text-white w-fit p-2 -mt-8 shadow-xl">
-						Story Points
-					</div>
-					<div class="mt-5 ml-2">
-						<ul>
-							<li>Dreamers are people born with prophetic dreams who awaken during puberty.</li>
-							<li>Dreamers can live for hundred of years. Slowly losing their blessing over time.</li>
-							<li>Dreamers sometimes see the future, but more often see glimpses of the past.</li>
-							<li>The last dreamer was born over 120 years ago.</li>
-							<li>There are only 7 known to be currently alive. Six of them make up The Council.</li>
-							<li>The 7th dreamer left the The Council after having a dream of his own death.</li>
-							<li>No one has seen the 7th in 70 years.</li>
-							<li>You start your journey as one of the 4 starter disciplines</li>
-							<li>Game Opens with you having a dream about The Council of 7 having an argument.</li>
-							<li>Through story you find out you are a Dreamer</li>
-						</ul>
-					</div>
-				</div>
-				<!-- Panel -->
-				<div class="w-full p-4 text-[10px] mb-10" style="background: rgba(0, 0, 0, .5);font-family: 'mana_seed_staticregular', sans-serif;">
-					<div class="bg-sky-800 text-white w-fit p-2 -mt-8 shadow-xl">
-						Game Mechanics - Disciplines
-					</div>
-					<div class="mt-5 ml-2">
-						The starting Disciplines when creating a character are:
-						<ul class="my-2">
-							<li>Cadet (Melee)</li>
-							<li>Scout (Ranged)</li>
-							<li>Acolyte (Healing Magic)</li>
-							<li>Apprentice (Damage Magic)</li>
-						</ul>
-						
-						After leveling up and spending points on the skills tree. You can unlock an Advanced Discpline:
-						<ul class="my-2">
-							<li>Cadet > Warrior, Knight, or Brawler</li>
-							<li>Scout > Trapper, Ranger, or Handler</li>
-							<li>Acolyte > Cleric, Druid, or Shaman</li>
-							<li>Apprentice> Wizard, Elementalist, or Warlock</li>
-						</ul>
-						
-						You will be able to master a discipline by spending enough points in the tree. Once you have master 2 disciplines you unlock Mastery Discuplines.
-						These futher modify skills, adding passives, or other decided changes.
-						<br>
-						See Actions below under Tier 2 Disciplines
-					</div>
-				</div>
-				<!-- Panel -->
-				<div class="w-full p-4 text-[10px] mb-10" style="background: rgba(0, 0, 0, .5);font-family: 'mana_seed_staticregular', sans-serif;">
-					<div class="bg-sky-800 text-white w-fit p-2 -mt-8 shadow-xl">
-						Game Mechanics - Stats
-					</div>
-					<div class="mt-5 ml-2">
-						Primary Stats:
-						<ul class="my-2">
-							<li>Power</li>
-							<li class="ml-10 list-none">How much damage weapons deal</li>
-							<li>Vitality</li>
-							<li class="ml-10 list-none">Health Points (HP) - How much damage you can take before you die.</li>
-							<li class="ml-10 list-none">HP gained when you level up.</li>
-							<li class="ml-10 list-none">HP regeneration rate.</li>
-							<li>Endurance</li>
-							<li class="ml-10 list-none">Action Points (AP) - How many time you can use actions. (Replaces mana, energy, rage, etc)</li>
-							<li class="ml-10 list-none">AP gained when you level up.</li>
-							<li class="ml-10 list-none">AP regeneration rate.</li>
-							<li>Will Power</li>
-							<li class="ml-10 list-none">Increase Action Damage</li>
-							<li class="ml-10 list-none">0Reduces Action costs.</li>
-						</ul>
-						
-						Secondary Stats:
-						<ul class="my-2">
-							<li>Speed</li>
-							<li class="ml-10 list-none">Movement Speed</li>
-							<li class="ml-10 list-none">Attack/Skill Speed</li>
-							<li>Luck</li>
-							<li class="ml-10 list-none">Drop Number</li>
-							<li class="ml-10 list-none">Drop Change</li>
-							<li class="ml-10 list-none">Rarity</li>
-							<li>Resistances</li>
-							<li class="ml-10 list-none">General Magic Resistance</li>
-							<li class="ml-10 list-none">Fire, Wind, Water ,Earth ,Holy ,Unholy Damage</li>
-							<li>Critical</li>
-							<li class="ml-10 list-none">Critical hit chance</li>
-							<li class="ml-10 list-none">Critical hit damage multiplier</li>
-							<li>Presence</li>
-							<li class="ml-10 list-none">Reputation Gain Speed</li>
-							<li class="ml-10 list-none">Bartering (Buy/Sell Cheaper/More)</li>
-							<li>Encumbrance</li>
-							<li class="ml-10 list-none">Gear Hinderance</li>
-						</ul>
-					</div>
-				</div>
-				<!-- Panel -->
-				<div class="w-full p-4 text-[10px] mb-10" style="background: rgba(0, 0, 0, .5);font-family: 'mana_seed_staticregular', sans-serif;">
-					<div class="bg-sky-800 text-white w-fit p-2 -mt-8 shadow-xl">
-						Game Mechanics - Actions
-					</div>
-					<div class="mt-5 ml-2">
-						<p class="italic text-base">***Undergoing Changes Regularly***</p>
-						<br>
-						<p>Actions fall into 4 categories:</p>
-						<ol>
-						   <li>Attack (Atk)</li>
-						   <li>Buff (Bf)</li>
-						   <li>Combat Action (CA)</li>
-						   <li>Passive (Psv)</li>
-						</ol>
-						<p class="mt-5">You assign Attacks and Combat Buff&#39;s to your main 4 slots. Buffs/Aura go on your secondary/buff slots. Using the controller (xbox) the ABXY will hold your 4 main abilities you wish to have active, holding Right Trigger (R2) will change the ABXY onscreen menu to the buff bar/cross putting buff/aura abilities on ABXY. This allows players to buff up/turn on off auras quickly without having to us up one of their 4 action slots. Combat Actions are skills that alter your character while in combat that you would want to utilized a ABYX key for but do not deal damage to the enemy. Example of this are Panic and Play Dead.</p>
-						<p>Passive abilities are active at all times as long as the Discipline is currently set in your Primary or secondary Discipline.</p>
-						<br>
-						<p>Starter Discipline</p>
-						<br>
-						<ul>
-						   <li>
-							  Cadet
-							  <ul>
-								 <li>
-									Charge (Atk) - Move toward enemy quickly and deal damage on impact.
-									<ol>
-									   <li>Going The Distance - Increases Range</li>
-									   <li>Move It - Paths Through Enemies In The Way</li>
-									   <li>Sweep The Leg - Apply Slow Debuff</li>
-									   <li>Impale - Applies bleed to target</li>
-									</ol>
-								 </li>
-								 <li>
-									Rally (bf) - Bonus Damage (Buff) - 2 Minutes
-									<ol>
-									   <li>Double Time - Buff Lasts 5 Minute</li>
-									   <li>Battle Standard - Double Damage Bonus</li>
-									   <li>Intimidation - Monsters around you while rally is active deal 10% less damage</li>
-									   <li>No Down Time - Buff reset every time you user Charge.</li>
-									</ol>
-								 </li>
-								 <li>
-									Panic (CA) - Minus Damage Dealt, Minus Damage Taken, Increased Movement Speed (2 Seconds)
-									<ol>
-									   <li>Self Control - Damage Dealt Penalty Removed</li>
-									   <li>Well Guarded - Damage Reduction Bonus Doubled</li>
-									   <li>Retreat - Movement Speed Bonus Increased to 5 Seconds</li>
-									   <li>Get Back - Knockback Enemies when ability used.</li>
-									</ol>
-								 </li>
-								 <li>
-									Strike (Atk) - Swings weapon in front of you hitting up to 3 enemies in a small melee ranged cone.
-									<ol>
-									   <li>Wild Strike - Increases number of targets to 5 and makes cone wider</li>
-									   <li>Triple Strike - On the third consecutive Strike attack, critical strike chance is doubled.</li>
-									   <li>Barbed Strike - Strike has a 20% chance to cause bleeding.</li>
-									   <li>Tactical Strike - Strike has a 25% chance of returning energy cost.</li>
-									</ol>
-								 </li>
-							  </ul>
-						   </li>
-						   <br>
-						   <li>
-							  <p>Scout</p>
-							  <ul>
-								 <li>
-									Take Aim (Atk)- High Damage Ranged Skill (Bow, Thrown, Etc) 1.5 Second Cast Time
-									<ol>
-									   <li>Quick Draw - Decreases cast time by .75 Seconds</li>
-									   <li>Serrated - 10% Chance to cause bleeding on hit.</li>
-									   <li>True Target - Once a target has been hit with Aim, All consecutives Take Aim or Piercing Projectiles will seek that target. Using any ability other than Take Aim or Piercing Projectiles resets True Target</li>
-									   <li>Pinning - 15% Chance to bind enemy for 2 seconds</li>
-									</ol>
-								 </li>
-								 <li>
-									Cheer (Bf) -  Regen 2 HP/ 1 AP per tick (Buff) - 1 Minute
-									<ol>
-									   <li>Sing It - Increases buff time to 5 minutes</li>
-									   <li>Pitch Perfect - HP/AP increased to 5/2</li>
-									   <li>Project - Cheer now effects party members within 15 meters</li>
-									   <li>Chorus - Cheer timer resets whenever you use a potion</li>
-									</ol>
-								 </li>
-								 <li>
-									Strafe (CA) - Increased Movement Speed (5 Seconds) - 1 second cooldown
-									<ol>
-									   <li>Quick Twitch - Increases movement bonus by 20%</li>
-									   <li>Endurance Training - Increases strafe to 10 seconds</li>
-									   <li>Acrobatics - Jump backward 5 meters when strafe is used.</li>
-									   <li>Cunning - Strafe also gives you a 20% chance to avoid being hit.</li>
-									</ol>
-								 </li>
-								 <li>
-									Piercing Projectile - Ranged skill that pierces enemies dealing 25% less damage per enemy hit.
-									<ol>
-									   <li>Barbed - Reduces damage by 33% for each target, has 25% chance to cause bleed.</li>
-									   <li>Sharpened Edge - Projectiles now do 20% less damage per target</li>
-									   <li>Heavy - Projectiles have a 10% chance to knockback on hit</li>
-									   <li>Efficient Projectiles - Every target hit by your projectile restores 1 AP.</li>
-									</ol>
-								 </li>
-							  </ul>
-							  <br>
-							  <li>
-							  <p>Acolyte</p>
-							  <ul>
-								<li>Holy Spark (Atk) - Magic Damage that flows from the player randomly toward enemies (Similar to spark in Diablo)</li>
-								<li>Vigor (Bf) - Health Point Regen Buff</li>
-								<li>Heal (CA) - Restore Hit Points</li>
-							  </ul>
-						   </li>
-						   <br>
-						   <li>
-							  Apprentice
-							  <ul>
-								 <li>Energy Bolt - Single target magic damage</li>
-								 <li>Concentrate - Action Point Regen Buff</li>
-								 <li>Blink (CA) - Short distance teleport in direction player is facing. Walls and Objects prevent blinking.</li>
-							  </ul>
-						   </li>
-						</ul>
-						<br>
-						<p>Tier 1 Disciplines - Cadet</p>
-						<br>
-						<blockquote>
-						   <ul>
-							  <li>
-								 Warrior - <em>Requires Dual Wield or Two-Handed Weapon</em>
-								 <ul>
-									<li>Charge > Intercept  -  Inherits all charge upgrades while adding an AOE splash damage around the final target.</li>
-									<li>Rally > Shout - Inherits all Rally upgrades and also applies an AOE Debuff increasing damage taken by 15%</li>
-									<li>Panic > Enrage  - Inherits all Panic upgrades but Increased Damage Dealt by 50% and Damage Taken by 25%</li>
-									<li>Strike > Slam  -  Inherits all Strike upgrades and increases damage dealt by 25% and has a 5% chance to confuse for 3 seconds</li>
-								 </ul>
-							  </li>
-							  <li>
-								 Knight - <em>Requires One-Handed Weapon and Shield/Guard</em>
-								 <ul>
-									<li>
-									   Charge > Shield Slam -  Inherits all charge upgrades, but you charge with your shield, preventing spell casting for 5 seconds. Replaces Impale with Knock Senseless.
-									   <ul>
-										  <li>Knock Senseless - Reduces damage dealt by 20% for 10 seconds.</li>
-									   </ul>
-									</li>
-									<li>Rally > Inspire - Rally now affects party members within 30 meters. Reduces damage taken by 20%</li>
-									<li>Panic > Combat Orders - Inherits all panic upgrades and causes a knockback when movement speed ends. Combat Orders speed boost effects everyone in the party.</li>
-									<li>Strike > Spinning Strike - Player now spins around hitting enemies in a 360 degree arc. Target limit removed.</li>
-								 </ul>
-							  </li>
-							  <li>
-								 Brawler - <em>Requires Fist/Martial Weapon</em>
-								 <ul>
-									<li>Charge > Bull Rush - Inherits all charge upgrades and is a guaranteed critical hit.</li>
-									<li>Rally > Instigate - Inherits all Rally upgrades and causes enemies around you to come into melee range.</li>
-									<li>Panic > Adrenaline - Inherits all Panic upgrades and increases attack speed by 20%</li>
-									<li>Strike > Pummel - Inherits all Strike upgrades and causes strike to happen 3 times in a row with 200% increased attack speed.</li>
-								 </ul>
-							  </li>
-						   </ul>
-						</blockquote>
-						<br>
-						<p>Scout</p>
-						<br>
-						<blockquote>
-						   <ul>
-							  <li>
-								 Ranger - Requires Ranged Weapon
-								 <ul>
-									<li>Take Aim > True Target - Inherits all Take Aim upgrades, targeting an enemy True Target will lock your projectiles onto that enemy for every follow up True Target attack. Any other ability resets True Target.</li>
-									<li>Cheer > XXXXX - Inherits all Cheer upgrades, also awards 2 additional AP regeneration.</li>
-									<li>Strafe > XXXXX - Inherits all Strafe upgrades, removes AP cost but adds 5 second cool down.</li>
-									<li>Piercing Projectile > Deadly Projectiles - Inherits all Piercing Projectile upgrades and increases critical strike chance of Deadly Projectiles by 25%</li>
-								 </ul>
-							  </li>
-							  <li>
-								 Hunter - Requires Ranged Weapon
-								 <ul>
-									<li>Summon Companion (CA) - Summons you beast companion</li>
-									<li>Cheer > Soothing - Cheer now has a chance to tame a beast within range, if the hunter does not currently have a companion.</li>
-									<li>Strafe > XXXXX - Inherits all Strafe upgrades, strafe also applies to your beast companion.</li>
-									<li>Piercing Projectiles > XXXXX - Inherits all Piercing Projectile upgrades and causes companion to dash to nearest enemy hit by projectile.</li>
-								 </ul>
-							  </li>
-							  <li>
-								 Musician - Requires Musical Instrument
-								 <ul>
-									<li>Take Aim > Riff - Inherits all Take Aim upgrades, removes cast time and turns ability into channeled skill. Damages target every tick.</li>
-									<li>Cheer > Crescendo - Inherits all Cheer upgrades, becomes channeled buff that increases HP/AP regen to</li>
-									<li>Strafe > Affrettando - Inherits all strafe upgrades and causes the the player to increase movement speed over time until speed is 200%</li>
-									<li>Piercing Projectiles > Cacophony - Inherits all Piercing Projectiles upgrades and causes targets hit by Cacophony to become silenced for 2 seconds</li>
-								 </ul>
-							  </li>
-						   </ul>
-						</blockquote>
-						<ul>
-						   <li>
-							  Wizard
-							  <ul>
-								 <li>Fireball (Atk) - Fire Based Damage, explodes on contact dealing fire splash damage</li>
-								 <li>Gust (Atk) - Aoe Cone Wind Based Damage</li>
-								 <li>Stalactite (Atk) - Aoe spot picked on map that deals Earth Based Damage</li>
-								 <li>Ice Spear (Atk) - Straight line piecing Water Based Damage that has a chance to freeze on hit. Stops when freeze occurs.</li>
-							  </ul>
-						   </li>
-						   <li>
-							  Cleric
-							  <ul>
-								 <li>Divine Light (Atk/CA)- Holy spell that deals Holy Damage to unfriendly target or Heals a friendly target.</li>
-								 <li>Resurrect (CA) - Bring dead player/npc/pet/summon back to life</li>
-								 <li>Regen (Bf)- HP Regen Buff</li>
-							  </ul>
-						   </li>
-						</ul>
-						<br>
-						<p>Tier 2 Disciplines</p>
-						<br>
-						<ul>
-						   <li>
-							  Mercenary (Warrior + Ranger)
-							  <ul>
-								 <li>Combat Plan (Psv)  - Boosts Weapon Damage (Melee/Ranged)</li>
-								 <li>Tactics  (Psv) - Increased Defense/Damage Reduction</li>
-							  </ul>
-						   </li>
-						   <li>
-							  War Mage (Warrior + Wizard)
-							  <ul>
-								 <li>Enchant Weapon (Psv) - Elemental Magic (Pick 1) Applied to Weapon (+Elemental Damage)</li>
-								 <li>Enchant Armor (Psv) - Elemental Magic (Pick 1) Applied To Armor (+Def Element)</li>
-							  </ul>
-						   </li>
-						   <li>
-							  Champion (Warrior + Cleric)
-							  <ul>
-								 <li>Holy Shroud (Psv) - % Magic Damage Reduction</li>
-								 <li>Inspire (Bf) - Stat Boost Aura</li>
-							  </ul>
-						   </li>
-						   <li>
-							  Spell Thief (Ranger + Wizard)
-							  <ul>
-								 <li>Drain Mana (Bf) - Applies mana steal to melee\ranged weapon</li>
-								 <li>Interrupt (CA) - Ranged spell that interrupts and Prevents Spell Cast for 5 seconds.</li>
-							  </ul>
-						   </li>
-						   <li>
-							  Artificer (Ranger + Cleric)
-							  <ul>
-								 <li>Healing Brew (CA) - Healing Spell + Short Buff</li>
-								 <li>Damage Brew (Atk) - Damage + Debuff</li>
-								 <li>Blessed Balistics (Bf) - Holy Damage Ranged Weapon Buff</li>
-							  </ul>
-						   </li>
-						   <li>
-							  Zealot (Cleric + Wizard)
-							  <ul>
-								 <li>Fear (CA) - Debuff</li>
-								 <li>Holy Shield (Psv) - Magic &amp; Physical Damage Reduction</li>
-							  </ul>
-						   </li>
-						</ul>
-					</div>
-				</div>
-				<!-- Panel -->
-				<div class="w-full p-4 text-[10px] mb-10" style="background: rgba(0, 0, 0, .5);font-family: 'mana_seed_staticregular', sans-serif;">
-					<div class="bg-sky-800 text-white w-fit p-2 -mt-8 shadow-xl">
-						Example Skill Tree
-					</div>
-					<div class="mt-5 ml-2">
-						<img src="/images/SkillLayoutExample.png">
-					</div>
-				</div>
-				<!-- Panel -->
-				
-			</main>
-			<footer class="bg-black border border-black w-full p-1">
-			  <div class="max-w-7xl mx-auto py-2 px-1 md:flex md:items-center md:justify-between md:pl-4">
-				<div class="flex justify-center space-x-8 md:space-x-4 md:order-2">
-				  <a href="https://www.facebook.com/pixelartrpg" target="_blank" class="text-gray-400 hover:text-gray-500">
-					<span class="sr-only">Facebook</span>
-					<i class="fa-brands fa-facebook-f text-2xl text-sky-200"></i>
-				  </a>
+        @font-face {
+            font-family: 'silk';
+            src: url('/font/silkscreen_normal_macroman/slkscr-webfont.eot');
+            src: url('/font/silkscreen_normal_macroman/slkscr-webfont.eot?#iefix') format('embedded-opentype'),
+            url('/font/silkscreen_normal_macroman/slkscr-webfont.woff2') format('woff2'),
+            url('/font/silkscreen_normal_macroman/slkscr-webfont.woff') format('woff'),
+            url('/font/silkscreen_normal_macroman/slkscr-webfont.ttf') format('truetype'),
+            url('/font/silkscreen_normal_macroman/slkscr-webfont.svg#silkscreennormal') format('svg');
+            font-weight: normal;
+            font-style: normal;
 
-				  <a href="https://www.reddit.com/r/pixelartrpg/" target="_blank" class="text-gray-400 hover:text-gray-500 mx-2">
-					<span class="sr-only">Reddit</span>
-					<i class="fa-brands fa-reddit-alien text-2xl text-sky-200"></i>
-				  </a>
+        }
 
-				  <a href="https://twitter.com/pixelartrpg" target="_blank" class="text-gray-400 hover:text-gray-500">
-					<span class="sr-only">Twitter</span>
-					<i class="fa-brands fa-twitter text-2xl text-sky-200"></i>
-				  </a>
+        li {
+            list-style-type: circle;
+            margin-left: 25px;
+            padding: 1px;
+        }
+    </style>
+</head>
 
-				  <a href="https://github.com/pixelartrpg" target="_blank" class="text-gray-400 hover:text-gray-500">
-					<span class="sr-only">GitHub</span>
-					<i class="fa-brands fa-github text-2xl text-sky-200"></i>
-				  </a>
-				</div>
-				<div class="mt-2 md:mt-0 md:order-1">
-				  <p class="text-center text-[11px] text-sky-200" style="font-family: 'mana_seed_staticregular', Arial, sans-serif;">&copy; 2022 Pixel Art RPG</p>
-				</div>
-			  </div>
-			</footer>
-			<!--
-			<div class="flex items-center m-2 fixed bottom-0 left-0 border border-gray-400 rounded p-2 bg-gray-300 text-red-600 text-xl z-50 opacity-100 cursor-pointer">
-				<span class="ml-1 sm:hidden md:hidden lg:hidden xl:hidden">xs</span>
-				<span class="ml-1 hidden sm:inline md:hidden font-extrabold">sm</span>
-				<span class="ml-1 hidden md:inline lg:hidden font-extrabold">md</span>
-				<span class="ml-1 hidden lg:inline xl:hidden font-extrabold">lg</span>
-				<span class="ml-1 hidden xl:inline font-extrabold">xl</span>
-			</div>
-			-->
-		</div>
-	</body>
+<body class="bg-gray-700 bg-cover bg-top px-8" style="background-image: url('/images/bg.png');">
+<div id="mainPanel" class="flex flex-col mx-auto h-full" style="box-shadow: 0 0 50px #000; max-width:1200px">
+    <div class="w-full bg-black bg-center z-10" style="background-image: url('/images/logo_bg.png'); min-height:125px;">
+        <img id="animate" class="absolute top-24 ml-2 mt-2" style="height: 56px; width: 56px; z-index:-10; opacity: 0"
+             src="/images/moon.png">
+        <img id="birds" class="absolute -mt-2"
+             style="height: 100px; width: 100px; z-index:20;transform: scaleX(-1); opacity: 40%"
+             src="/images/birds.gif">
+        <img class="h-20 mt-7 mx-auto z-20" src="/images/logo_text.png">
+    </div>
+    <div id="navbanner" class="banner bg-sky-700 text-white w-full border-t border-b border-black z-20">
+        <div class="pt-[5px] md:pt-[3px] w-full h-8 md:h-10 flex content-center">
+            <a href="index.html" class="cursor-pointer hover:opacity-100 flex-1 opacity-50"
+               style="font-family: 'silk', Arial, sans-serif;">
+                <div class="text-center text-[14px] md:text-[24px] whitespace-nowrap">Home</div>
+            </a>
+            <a href="plans.html" class="cursor-pointer hover:opacity-100 flex-1 opacity-100"
+               style="font-family: 'silk', Arial, sans-serif;">
+                <div class="text-center text-[14px] md:text-[24px] whitespace-nowrap">Plans</div>
+            </a>
+            <a href="blog.html" class="cursor-pointer hover:opacity-100 flex-1 opacity-50"
+               style="font-family: 'silk', Arial, sans-serif;">
+                <div class="text-center text-[14px] md:text-[24px] whitespace-nowrap"><span
+                        class="hidden lg:inline-block">Dev</span> Blog
+                </div>
+            </a>
+            <a href="photos.html" class="cursor-pointer hover:opacity-100 flex-1 opacity-50"
+               style="font-family: 'silk', Arial, sans-serif;">
+                <div class="text-center text-[14px] md:text-[24px]">Photos</div>
+            </a>
+            <a href="team.html" class="cursor-pointer hover:opacity-100 flex-1 opacity-50"
+               style="font-family: 'silk', Arial, sans-serif;">
+                <div class="text-center text-[14px] md:text-[24px]"><span class="hidden lg:inline-block">Our</span> Team
+                </div>
+            </a>
+        </div>
+    </div>
+    <main class="flex-grow text-white w-full border-2 border-black px-4 py-1" style="background: rgba(0, 0, 0, .5);">
+        <div class="w-full text-center mt-2 mb-5 italic"
+             style="font-family: sans-serif;">
+            *Any information on this page is subject to change at anytime
+        </div>
+        <!-- Panel -->
+        <div class="w-full p-4 text-[10px] mb-10"
+             style="background: rgba(0, 0, 0, .5);font-family: sans-serif;">
+            <div class="bg-sky-800 text-white w-fit p-2 -mt-8 shadow-xl" style="font-family: 'mana_seed_staticregular'">
+                Game Mechanics - Overview
+            </div>
+            <div class="mt-5 ml-2 text-base">
+                I original had a very large list of features I was wanting to add to the game. But after many hours of
+                watching videos,
+                reading other indie dev blogs, and working on a Game Design Document, I decided to get the game
+                mechanics down to the base
+                needed for a full fleshed out game. With major releases for additional content systems. Here are the
+                items going into the base
+                game.
+
+                <ul class="pt-3">
+                    <li>Stat System</li>
+                    <li>Skill Tree</li>
+                    <li>Discipline System</li>
+                    <li>Spell/Skill Mechanic</li>
+                    <li>Relic/Tools System</li>
+                    <li>Quest System</li>
+                    <li>Time Mechanic</li>
+                    <li>Multi-player Couch Co-Op/Network Play</li>
+                    <li>Indepth Story</li>
+                    <li>Puzzle Mechanic</li>
+                </ul>
+                <br>
+                <div>
+                    The game will be playable with Controller or Mouse & Keyboard.
+                    If you are using keyboard and mouse you will have a bar with assignable hotkeys. Default will be
+                    1-0.
+                    This gives you 10 effective hotkeys.<br>
+                    If you are using an Xbox style controller will have ABYX, RT, LB, RB.<br>
+                    If you are using a Playstation Style controller you would use
+                    <img class="inline" style="height:14px;" src="images/ps.png">
+                    and the R2, L1, L2
+                </div>
+            </div>
+        </div>
+        <!-- Panel -->
+        <div class="w-full p-4 text-[10px] mb-10"
+             style="background: rgba(0, 0, 0, .5);font-family: sans-serif">
+            <div class="bg-sky-800 text-white w-fit p-2 -mt-8 shadow-xl" style="font-family: 'mana_seed_staticregular'">
+                Game Mechanics - Stats
+            </div>
+            <div class="mt-5 ml-2 text-base">
+                <div class="text-yellow-200">Primary Stats:</div>
+                <ul class="my-2">
+                    <li>Power</li>
+                    <li class="ml-10 list-none text-gray-300">How much damage melee/ranged weapons deal</li>
+                    <li>Vitality</li>
+                    <li class="ml-10 list-none text-gray-300">HP Multiplier</li>
+                    <li class="ml-10 list-none text-gray-300">HP regeneration rate.</li>
+                    <li>Stamina</li>
+                    <li class="ml-10 list-none text-gray-300">AP Multiplier</li>
+                    <li class="ml-10 list-none text-gray-300">AP regeneration rate.</li>
+                    <li>Will Power</li>
+                    <li class="ml-10 list-none text-gray-300">Increase Action Damage</li>
+                    <li class="ml-10 list-none text-gray-300">Reduces Action costs.</li>
+                </ul>
+
+                <div class="text-yellow-200">Secondary Stats:</div>
+                <ul class="my-2">
+                    <li>Speed <span class="italic">(Action Speed)</span></li>
+                    <li class="ml-10 list-none text-gray-300">Movement Speed</li>
+                    <li class="ml-10 list-none text-gray-300">Attack/Skill Speed</li>
+                    <li>Endurance</li>
+                    <li class="ml-10 list-none text-gray-300">General Physical Resistance</li>
+                    <li>Resilience</li>
+                    <li class="ml-10 list-none text-gray-300">General Magic Resistance</li>
+                    <li>Critical Strike</li>
+                    <li class="ml-10 list-none text-gray-300">Critical hit chance</li>
+                    <li class="ml-10 list-none text-gray-300">Critical hit damage multiplier</li>
+                </ul>
+
+                <div class="text-yellow-200">Status Effects:</div>
+                <ul class="my-2">
+                    <li>Daze - Reduces action speed by 25%.</li>
+                    <li>Fear - Causes the enemy to run away for 1 second.</li>
+                    <li>Confuse - Causes the enemy to randomly target a new target, friend or foe</li>
+                    <li>Bleed/Poison - Causes the target to lose health over time due to bleeding.</li>
+                    <li>Balloon/Root/Knock Down/Charm - Prevents the target from moving but allows them to perform other
+                        actions for 2
+                        seconds.
+                    </li>
+                </ul>
+
+                <div class="text-yellow-200">Baseline Character Stats</div>
+                <ul class="my-2">
+                    <li>HP: 100</li>
+                    <li>AP: 30</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Panel -->
+        <div class="w-full p-4 text-[10px] mb-10 text-base"
+             style="background: rgba(0, 0, 0, .5);font-family:  sans-serif;">
+            <div class="bg-sky-800 text-white w-fit p-2 -mt-8 shadow-xl" style="font-family: 'mana_seed_staticregular'">
+                Game Mechanics - Disciplines
+            </div>
+            <div class="mt-5 ml-2">
+                <div class="text-yellow-200">The starting Disciplines:</div>
+                <ul class="my-2">
+                    <li>Cadet (Melee)</li>
+                    <li>Scout (Ranged)</li>
+                    <li>Acolyte (Healing Magic)</li>
+                    <li>Apprentice (Damage Magic)</li>
+                </ul>
+                <div class="italic text-gray-400 mt-5">Note: This will be the <b>second</b> major release.</div>
+                After leveling up and spending points on the skills tree. You can unlock
+                <div class="text-yellow-200 my-3">Advanced Discipline:</div>
+                <ul class="my-2">
+                    <li>Cadet > Warrior, Knight, or Brawler</li>
+                    <li>Scout > Trapper, Ranger, or Handler</li>
+                    <li>Acolyte > Cleric, Druid, or Shaman</li>
+                    <li>Apprentice> Wizard, Elementalist, or Warlock</li>
+                </ul>
+                <div class="italic text-gray-400 mt-5">Note: This will be the <b>third</b> major release.</div>
+                You will be able to master a discipline by spending enough points in the tree. Once you have mastered 2
+                disciplines you unlock the
+                <div class="text-yellow-200 inline">Mastery Disciplines</div>
+                .
+                <br>
+                <div class="italic text-gray-300 mt-5">Note: See Actions below under Mastery Disciplines.</div>
+            </div>
+        </div>
+        <!-- Panel -->
+        <div class="w-full p-4 text-[10px] mb-10"
+             style="background: rgba(0, 0, 0, .5);font-family:  sans-serif;">
+            <div class="bg-sky-800 text-white w-fit p-2 -mt-8 shadow-xl" style="font-family: 'mana_seed_staticregular'">
+                Game Mechanics - Actions
+            </div>
+            <div class="mt-5 ml-2 text-base">
+                <br>
+                <div class="text-yellow-200">Actions fall into 4 categories:</div>
+                <ol>
+                    <li>Attack (Atk)</li>
+                    <li class="list-none ml-10">
+                        <div class="text-gray-300">Activated skills that are used to deal damage to the enemy.</div>
+                    </li>
+                    <li>Buff (Bf)</li>
+                    <li class="list-none ml-10">
+                        <div class="text-gray-300">Activated skills that improve your character in some way.</div>
+                    </li>
+                    <li>Combat Action (CA)</li>
+                    <li class="list-none ml-10">
+                        <div class="text-gray-300">Combat Actions are activated skills that alter your character while
+                            in combat but typically do not deal damage.
+                        </div>
+                    </li>
+                    <li>Passive (Psv)</li>
+                    <li class="list-none ml-10">
+                        <div class="text-gray-300">Passive abilities are only seen on the Skills Tree, they do not have
+                            an assigned key and are thus always active.
+                        </div>
+                    </li>
+                </ol>
+
+                <p class="mt-5">
+                    You assign Attacks and Combat Buff&#39;s to your main 4 slots. Buffs/Aura go on your secondary/buff
+                    slots.
+                    Using the controller (xbox) the ABXY will hold your 4 main abilities you wish to have active.
+                    Holding Right Trigger (RT) will change the ABXY to the buff/aura bar.
+                    This allows players to buff up/turn on/off auras quickly.
+                </p>
+                <p>Passive abilities are active at all times as long as the Discipline is currently set in your Primary
+                    or secondary Discipline.</p>
+                <br>
+                <div>
+                    Each discipline will get access to 4 main abilities. These unlock as your level.
+                    The actions can be further improved with DP (discipline points) adding passive abilities to the
+                    primary action.
+                    <ul class="py-3">
+                        <li class="text-gray-300">
+                            Skill (Type) [Unlock Level] - Brief description of action
+                            <ol class="text-gray-300">
+                                <li>Passive Improvement - Explination</li>
+                                <li>Passive Improvement - Explination</li>
+                                <li>Passive Improvement - Explination</li>
+                                <li>Passive Improvement - Explination</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+
+                <br>
+
+                <div class="text-yellow-200">Starter Discipline</div>
+                <br>
+                <ul>
+                    <li>
+                        Cadet
+                        <ul>
+                            <li>
+                                Strike (Atk)[1] - Swings weapon in front of you hitting up to 3 enemies in a small melee
+                                ranged cone.
+                                <ol class="text-gray-300">
+                                    <li>Wild Strike - Increases number of targets to 5 and makes cone wider</li>
+                                    <li>Triple Strike - On the third consecutive Strike attack, critical strike chance
+                                        is doubled.
+                                    </li>
+                                    <li>Barbed Strike - Strike has a 20% chance to cause bleeding.</li>
+                                    <li>Tactical Strike - Strike has a 25% chance of returning energy cost.</li>
+                                </ol>
+                            </li>
+                            <li>
+                                Panic (CA)[3] - Minus Damage Dealt, Minus Damage Taken, Increased Movement Speed (2
+                                Seconds)
+                                <ol class="text-gray-300">
+                                    <li>Self Control - Damage Dealt Penalty Removed</li>
+                                    <li>Well Guarded - Damage Reduction Bonus Doubled</li>
+                                    <li>Retreat - Movement Speed Bonus Increased to 5 Seconds</li>
+                                    <li>Get Back - Knockback Enemies when ability used.</li>
+                                </ol>
+                            </li>
+                            <li>
+                                Charge (Atk)[5] - Move toward enemy quickly and deal damage on impact.
+                                <ol class="text-gray-300">
+                                    <li>Going The Distance - Increases Range</li>
+                                    <li>Move It - Paths Through Enemies In The Way</li>
+                                    <li>Sweep The Leg - Apply Slow Debuff</li>
+                                    <li>Impale - Applies bleed to target</li>
+                                </ol>
+                            </li>
+                            <li>
+                                Rally (Bf)[6] - Bonus Damage (Buff) - 2 Minutes
+                                <ol class="text-gray-300">
+                                    <li>Double Time - Buff Lasts 5 Minute</li>
+                                    <li>Battle Standard - Double Damage Bonus</li>
+                                    <li>Intimidation - Monsters around you while rally is active deal 10% less damage
+                                    </li>
+                                    <li>No Down Time - Buff reset every time you user Charge.</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li>
+                        <p>Scout</p>
+                        <ul>
+                            <li>
+                                Shoot (Atk) [1] - Shoot or throw ranged attack that deals damage.
+                                <ol class="text-gray-300">
+                                    <li>Serrated - 10% Chance to cause bleeding on hit.</li>
+                                    <li>Pinning - 15% Chance to root enemy for 2 seconds</li>
+                                    <li>True Target - Adds charge ability to Shoot, allowing the skill to be charged up
+                                        for 2 Seconds. Enemies hit with a fully charged shot, will be marked.
+                                        All consecutive attacks will seek that marked target after hitting the most
+                                        recent target.
+                                    </li>
+                                    <li>Quick Draw - Decreases True Target charge time by 1 Seconds</li>
+                                </ol>
+                            </li>
+                            <li>
+                                Strafe (CA) [2] - Increased Movement Speed (5 Seconds) - 1 second cooldown
+                                <ol class="text-gray-300">
+                                    <li>Quick Twitch - Increases movement bonus by 20%</li>
+                                    <li>Endurance Training - Increases strafe to 10 seconds</li>
+                                    <li>Acrobatics - Jump backward 5 meters when strafe is used.</li>
+                                    <li>Cunning - Strafe also gives you a 20% chance to avoid being hit.</li>
+                                </ol>
+                            </li>
+                            <li>
+                                Cheer (Bf) [5] - Regen 2 HP/ 1 AP per second (Buff) - 3 Minute
+                                <ol class="text-gray-300">
+                                    <li>Sing It - Increases buff time to 8 minutes</li>
+                                    <li>Pitch Perfect - HP/AP increased to 5/2</li>
+                                    <li>Project - Cheer now effects party members within 15 meters</li>
+                                    <li>Chorus - Adds charge ability to Cheer, allowing the buff to be charged up to 3
+                                        seconds.
+                                        Each second that chorus is charged it increases the duration by 4 minutes. Must
+                                        be used while in combat
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                Piercing Projectile [6] - Ranged skill that pierces enemies dealing 25% less damage per
+                                enemy hit.
+                                <ol class="text-gray-300">
+                                    <li>Barbed - Has 25% chance to cause bleed.</li>
+                                    <li>Honed - Projectiles now do 15% less damage per target</li>
+                                    <li>Heavy - Projectiles have a 10% chance to daze on hit.</li>
+                                    <li>Broad - Projectiles have a cone effect that hits targets in a larger path.</li>
+                                </ol>
+                            </li>
+                        </ul>
+                        <br>
+                    <li>
+                        <p>Acolyte</p>
+                        <ol class="text-gray-300">
+                            <li>Holy Spark (Atk) [1] - Magic Damage that flows from the player randomly toward enemies
+                                <ol class="text-gray-300">
+                                    <li>Righteous Path - Holy Sparks linger for .5 seconds as they travel.</li>
+                                    <li>Dazzling Light - Sparks have a 20% chance to daze enemies on hit.</li>
+                                    <li>Smite - Changes Holy Spark to be a targeted ability that hits with a large
+                                        lightning bolt that then holy sparks emit from the enemy location.
+                                    </li>
+                                    <li>Diving Guidance - Changes Holy Spark to a charged ability that can be charged
+                                        upto 4 seconds. Increasing damage by 25% per second.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>Heal (CA) - Restore Hit Points
+                                <ol class="text-gray-300">
+                                    <li>Focus - Increases healing effectiveness by 25%</li>
+                                    <li>Mend - Adds an HP Over time buff to the target that heals for 30% of the heal
+                                        over 5 seconds.
+                                    </li>
+                                    <li>Bless - Reduces damage target takes by 15% for 5 seconds.</li>
+                                    <li>Devote - Heal becomes a charged ability that can be charged up to 3 seconds
+                                        increases healing effectiveness by 35% per second.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>Cleanse (CA) - Removes a random status effect.
+                                <ol class="text-gray-300">
+                                    <li>Purify - Increases number of status effects removed by 2.</li>
+                                    <li>Exorcise - If cleanse is used on an enemy, it removes a buff from the enemy.
+                                    </li>
+                                    <li>Revitalize - Restores 10% HP per status effect removed.</li>
+                                    <li>Sanctify - Cleanse becomes a charged ability that can be charged up to 3
+                                        seconds. If fully charged it resurrects dead players with 10% life and no AP.
+                                        This effect has a five-minute cooldown.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>Prayer (CA) - Charge ability that restores 20% AP per second. Charging stops when player
+                                releases button or AP hits full.
+                                <ol class="text-gray-300">
+                                    <li>Renewal - Increases the amount of AP restored per a second to 30%.</li>
+                                    <li>Divine Focus - Grants a buff that lasts 3 seconds and increases AP regeneration
+                                        by 50%.
+                                    </li>
+                                    <li>Sanctuary - Creates a 15 meter area around the player that grants AP
+                                        regeneration to
+                                        allies within the area.
+                                    </li>
+                                    <li>Hallowed Ground - Enemies that enter the area around the player, are feared.
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                    <br>
+                    <li>
+                        Apprentice
+                        <ol class="text-gray-300">
+                            <li>Arcane Dart (Atk) - A basic attack spell that hurls a dart of arcane energy at the
+                                target.
+                                <ol class="text-gray-300">
+                                    <li>Arcane Infusion - Increases Arcane Dart's damage by 25%.</li>
+                                    <li>Mana Burn - Arcane Dart also burns a small amount of the target's AP.</li>
+                                    <li>Split - Arcane Dart splits into 2 additional darts targeting nearby enemies.
+                                    </li>
+                                    <li>Explosive Dart - Changes arcane dart into a charged ability that can be charged
+                                        up to 2 seconds,
+                                        fully charged the dart will explode on impact, dealing area damage.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>Blink (CA) - Teleports the Apprentice a short range.
+                                <ol class="text-gray-300">
+                                    <li>Extended Blink - Increases the range of Blink by 50%.</li>
+                                    <li>Quick Blink - Reduces the cooldown of Blink by 20%.</li>
+                                    <li>Echo - Blink creates an echo of themselves at the starting location that casts
+                                        arcane shield on itself. Echo lasts 1.5 seconds.
+                                    </li>
+                                    <li>Projection - Blink creates 2 echos at the target location that cast Arcane Dart
+                                        at the target you cast Arcane Dart at. Echos last 1.5 seconds.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>Concentrate (CA) - Restores 10 AP. 4 second cooldown.
+                                <ol class="text-gray-300">
+                                    <li>Focus - Increases the amount of AP restored by 50%.</li>
+                                    <li>Study - Reduces the cooldown of Concentrate by 2 seconds.</li>
+                                    <li>Surge - Concentrate also grants a buff that increases damage by 20% for 10
+                                        seconds. Cannot be reapplied if buff active.
+                                    </li>
+                                    <li>Channel - Concentrate becomes a charged ability that restores 10% of max AP over
+                                        1 second while being charged. Charging stops when player releases button or AP
+                                        hits full.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>Arcane Shield (Bf) - Buff that absorbs 20% of all damage for 10 seconds or until total
+                                damage absorbed is equal to max HP.
+                                <ol class="text-gray-300">
+                                    <li>Enhanced Shield - Increases the damage that is absorbed to 25%.</li>
+                                    <li>Reflective Shield - Arcane Shield reflects 50% of the damage it absorbs to the
+                                        attacker.
+                                    </li>
+                                    <li>Arcane Battery - Arcane Shield grants 10% of damaged absorbed as AP.</li>
+                                    <li>Mystic Barrier - If a party member passes through the Arcane Shield area while
+                                        active, they get a smaller weaker version.
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+                <br>
+                <p>Tier 1 Disciplines - Cadet</p>
+                <br>
+                <blockquote>
+                    <ul>
+                        <li>
+                            Warrior - <em>Requires Dual Wield or Two-Handed Weapon</em>
+                            <ul>
+                                <li>Strike > Slam - Inherits all Strike upgrades and increases damage dealt by 25% and
+                                    has a 5% chance to confuse for 3 seconds
+                                </li>
+                                <li>Panic > Enrage - Inherits all Panic upgrades but Increased Damage Dealt by 50% and
+                                    Damage Taken by 25%
+                                </li>
+                                <li>Charge > Intercept - Inherits all charge upgrades while adding an AOE splash damage
+                                    around the final target.
+                                </li>
+                                <li>Rally > Shout - Inherits all Rally upgrades and also applies an AOE Debuff
+                                    increasing damage taken by 15%
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Knight - <em>Requires One-Handed Weapon and Shield/Guard</em>
+                            <ul>
+                                <li>Strike > Spinning Strike - Player now spins around hitting enemies in a 360 degree
+                                    arc. Target limit removed.
+                                </li>
+                                <li>Panic > Combat Orders - Inherits all panic upgrades and the speed boost effects
+                                    everyone in the party.
+                                    Replaces Get Back with Get Over Here.
+                                    <ul>
+                                        <li>Get Over Here - Taunts all enemies within 30 meters.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Charge > Shield Slam - Inherits all charge upgrades, but you charge with your
+                                    shield dazing all enemies on your path. Replaces Impale with Knock
+                                    Senseless.
+                                    <ul>
+                                        <li>Knock Senseless - Reduces damage dealt by 20% for 10 seconds.</li>
+                                    </ul>
+                                </li>
+                                <li>Rally > Inspire - Rally now affects party members within 30 meters. Reduces damage
+                                    taken by 20%
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Brawler - <em>Requires Fist/Martial Weapon</em>
+                            <ul>
+                                <li>Strike > Pummel - Inherits all Strike upgrades and causes strike to happen 3 times
+                                    in a row with 200% increased attack speed.
+                                </li>
+                                <li>Panic > Adrenaline - Inherits all Panic upgrades and increases attack speed by 20%
+                                </li>
+                                <li>Charge > Bull Rush - Inherits all charge upgrades and is a guaranteed critical
+                                    hit.
+                                </li>
+                                <li>Rally > Instigate - Inherits all Rally upgrades and causes enemies around you to
+                                    come into melee range.
+                                </li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </blockquote>
+                <br>
+                <p>Scout</p>
+                <br>
+                <blockquote>
+                    <ul>
+                        <li>
+                            Ranger - Requires Ranged Weapon
+                            <ul>
+                                <li>Shoot > Barrage - Inherits all Shoot upgrades and causes shoot to trigger 5 times in
+                                    a randomized direction within a cone. Shoots attack speed is increased by 300%
+                                </li>
+                                <li>Strafe > Strafing Shot - Inherits all Strafe upgrades, and triggers Barrage at the
+                                    target when Cunning is triggered.
+                                </li>
+                                <li>Cheer > Rile Up - Inherits all Cheer upgrades. Replaces Project and Chorus. Changes
+                                    the name of Sing It and Pitch Perfect to better reflect the internalized skill.
+                                    <ul>
+                                        <li>Project > Intimidate - Nearby(10m) enemies are feared.</li>
+                                        <li>Chorus > Silence - Adds charge ability to Rile Up, allowing the buff to be
+                                            charged up to 4 seconds.
+                                            Buff grants 10% damage increase for each second that Rile Up is charged.
+                                            Must be used in combat.
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>Sing It > Ponder It</li>
+                                        <li>Pitch Perfect > Mental Focus</li>
+                                    </ul>
+                                </li>
+                                <li>Piercing Projectile > Deadly Projectiles - Inherits all Piercing Projectile upgrades
+                                    and increases critical strike chance of Deadly Projectiles by 25%
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Hunter - Requires Ranged Weapon
+                            <ul>
+                                <li>Shoot > Engage - Inherits all Shoot upgrades and causes engage to make your
+                                    companion attack the enemy hit by engage.
+                                </li>
+                                <li>New Ability: Summon Companion (CA) - Summons you beast companion</li>
+                                <li>Cheer > Calming Chant - Cheer now has a chance to tame a beast within range while
+                                    being channeled with Chorus, if the
+                                    hunter does not currently have a companion.
+                                </li>
+                                <li>Strafe > Walkies - Inherits all Strafe upgrades, strafe also applies to your beast
+                                    companion.
+                                    <ul>
+                                        Acrobatics > Protect - Your companion jumps to your location and taunts nearby
+                                        enemies.
+                                    </ul>
+                                </li>
+                                <li>Piercing Projectiles > Beast Master
+                                    <ul>
+                                        <li>
+                                            Barbed > Bite - companion has 35% chance to cause bleed on hit.
+                                            Honed > Shake - Companion has a 30% chance to cause confusion on hit
+                                            Heavy > Pounce - Companion has a 20% chance to daze on hit.
+                                            Broad > Growl - Companion has a 20% chance to fear on hit.
+                                        </li>
+                                        Unlike other abilities. Hunters get a pet bar that allows the above to be
+                                        toggled on or off.
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Musician - Requires Musical Instrument
+                            <ul>
+                                <li>Shoot > Play - Inherits all shoot upgrades and changes passive names.
+                                    <ul>
+                                        <li>Serrated > High Pitch</li>
+                                        <li>Pinning > Moving</li>
+                                        <li>True Target > Serenade</li>
+                                        <li>Quick Draw > Talented</li>
+                                    </ul>
+                                </li>
+                                <li>Strafe > Affrettando - Inherits all strafe upgrades and causes the player to
+                                    increase movement speed by 20% per second. Changes passive names. Replaces Quick
+                                    Twitch and Acrobatics.
+                                    <ul>
+                                        Quick Twitch > Harmonize - Regenerate 10% of HP per second while buff is active.
+                                        Acrobatics > Spotlight - Push back all enemies within 10 meters when cast.
+                                    </ul>
+                                    <ul>
+                                        Endraunce Training > Encore
+                                        Cunning > Crowd Surfing
+                                    </ul>
+                                </li>
+                                <li>Cheer > Crescendo - Inherits all Cheer upgrades, becomes channeled buff that
+                                    increases HP/AP regen to everyone. Project also deals 50% of health regenerated by
+                                    party members as damage divided between all enemies.
+                                </li>
+                                <li>Piercing Projectiles > Cacophony - Changes Piercing Projectiles to Cacophony with
+                                    new passives. Cacophony is an aoe channeled ability.
+                                    <ul>
+                                        <li>Serrated > Dissonate - 10% chance to cause confusion to nearby enemies.</li>
+                                        <li>Pinning > Entertain - 20% chance to cause balloon to nearby enemies.</li>
+                                        <li>True Target > Munson Mayhem - 25% change to cause daze to nearby enemies.
+                                        </li>
+                                        <li>Quick Draw > Bass Drop - 15% chance to cause fear to nearby enemies.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </blockquote>
+                <br>
+                <p>Acolyte</p>
+                <br>
+                <blockquote>
+                    <ul>
+                        <li>
+                            Cleric
+                            <ul>
+                                <li>Holy Spark > Divine Spark - Inherits all Holy Spark upgrades and adds a healing
+                                    effect to allies hit by the sparks.
+                                    <ul>
+                                        <li>Righteous Path > Sacred Path - Sparks linger longer and heal allies in the
+                                            path.
+                                        </li>
+                                        <li>Dazzling Light > Blinding Light - Increases the chance to daze enemies and
+                                            also reduces their damage by 15%.
+                                        </li>
+                                        <li>Smite > Holy Smite - Smite now heals allies around the target and deals more
+                                            damage.
+                                        </li>
+                                        <li>Divine Guidance > Celestial Guidance - Increases damage from 25% per second
+                                            to 35% per second charged.
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>Heal > Divine Heal - Inherits all Heal upgrades and adds a shield that absorbs
+                                    damage equal to 50% of the healing done for 10 seconds.
+                                    <ul>
+                                        <li>Focus > Sacred Focus - Further increases healing effectiveness by an
+                                            additional 25%.
+                                        </li>
+                                        <li>Mend > Restorative Mend - Increases the HP over time buff and also removes
+                                            one random debuff from the target.
+                                        </li>
+                                        <li>Bless > Divine Blessing - Extends the damage reduction duration and also
+                                            increases resistance to all status effects.
+                                        </li>
+                                        <li>Devote > Holy Devotion - Further increases healing effectiveness per second
+                                            charged and applies 5% HP regen per second for 10 seconds.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Cleanse > Purify Soul - Inherits all Cleanse upgrades and adds a small heal to the
+                                    target per status effect removed.
+                                    <ul>
+                                        <li>Purify > Deep Purify - Removes all status effects</li>
+                                        <li>Exorcise > Holy Exorcise - If Purify Soul is used on an enemy, it removes a
+                                            buff and reduces damage by 10% for 10 seconds.
+                                        </li>
+                                        <li>Revitalize > Rejuvenate - Restores 20% HP per status effect removed and
+                                            grants 2% of HP restored as AP.
+                                        </li>
+                                        <li>Sanctify > Resurrect - Removes abilities to charge. Instantly resurrects
+                                            target with full health. This effect has a five-minute cooldown.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Prayer > Divine Prayer - Inherits all Prayer upgrades and increases the radius of
+                                    the AP restoration area to 30 meters.
+                                    <ul>
+                                        <li>Renewal > Blessed Renewal - Increases AP restored per second to 30%</li>
+                                        <li>Divine Focus > Holy Focus - Extends the buff from Divine Focus to 5
+                                            seconds.
+                                        </li>
+                                        <li>Sanctuary > Sacred Sanctuary - Increases the size of the area to 30 meters
+                                            and adds 10% HP per second to allies within it.
+                                        </li>
+                                        <li>Hallowed Ground > Holy Ground - Increases the fear duration to 5 seconds and
+                                            increases enemy movement speed by 50%.
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Druid
+                            <ul>
+                                <li>Holy Spark > Nature's Wrath - Physical Damage that spawns roots from the player
+                                    randomly toward enemies
+                                    <ul>
+                                        <li>Righteous Path > Barbed Roots - Spawned roots have thorns on them that have
+                                            cause 15 damage when walked on by enemy.
+                                        </li>
+                                        <li>Dazzling Light > Toxic Thorns - Spawned roots have a 25% chance to poison
+                                            enemy when walked over..
+                                        </li>
+                                        <li>Smite > Entanglement - Changes Nature's Wrath to be a targeted ability that
+                                            creates a large bramble inclosure on the target. The roots spawn out from
+                                            the bramble.
+                                        </li>
+                                        <li>Divine Guidance > Tighten Grip - Changes Nature's Wrath to be a channel-able
+                                            ability that causes the bramble inclosure to deal damage every second while
+                                            being channeled and spawn more roots.
+                                            channel-able until you run out of AP.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Heal > Healing Rain - Casts a ten-meter cloud that rains down onto the field.
+                                    Players in the area regenerate 10% HP per second while inside the rains.
+                                    <ul>
+                                        <li>Revitalizing Mist - Players inside the Healing Rain also receive a 10%
+                                            increase in AP regeneration.
+                                        </li>
+                                        <li>Purifying Waters - The Healing Rain removes one random debuff from players
+                                            every 5 seconds.
+                                        </li>
+                                        <li>Rejuvenating Puddles - Healing Rain leaves behind puddles of water that
+                                            grant 10% increase in movement speed for 1 second when walked over.
+                                        </li>
+                                        <li>Thunder Storm - Increases the radius of the Healing Rain to 15 meters and
+                                            causes random lightning to strike enemies for 20 damage per hit.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Cleanse > Summon Familiar - Summons a permanent nature-based familiar that fights
+                                    alongside the druid. Can only have one companion active at a time.
+                                    <ul>
+                                        <li>Summon Wolf - Summons a wolf companion that deals high melee damage and can
+                                            occasionally cause enemies to bleed.
+                                        </li>
+                                        <li>Summon Bear - Summons a bear companion that deals low melee damage and can
+                                            taunt enemies to focus on it.
+                                        </li>
+                                        <li>Summon Eagle - Summons an eagle companion that deals medium ranged damage
+                                            and can occasionally daze enemies with its air swoop.
+                                        </li>
+                                        <li>Summon Treant - Summons a treant companion that deals low ranged physical
+                                            damage (shoots thorns fast) and roots enemies in place.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Prayer > Invoke Nature - Replaces Prayer with the ability to summon various nature
+                                    companions that help the party.
+                                    <ul>
+                                        <li>Summon Frogs - Summons a bunch of tiny frogs that hops around licking
+                                            players wounds and removing status effects and healing player for 2% of HP.
+                                            Frogs last 5 seconds.
+                                        </li>
+                                        <li>Summon Dragonfly - Summons a bunch of tiny dragonfly that grants 5% AP when
+                                            a player catches them (walks over them).
+                                        </li>
+                                        ;
+                                        <li>Summon Fairy - Summons a small magical fairy that lasts for 15 seconds that
+                                            will heal party members if they drop below 50% health.
+                                            The fairy casts fairy heal - Grants 30% HP regen over 3 seconds. Has an
+                                            internal cooldown of 2 seconds.
+                                        </li>
+                                        <li>Summon Dryad - Summons a three Dryad that cast charm, confuse, and fear on
+                                            random enemies. Dryads last for 1 spell cast each or 10 seconds.
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            Shaman
+                            <ul>
+                                <li>Enraged Spirits - Grants ability to that summons 5 ancestral spirits that wander
+                                    randomly and attack enemies when they are within melee range Spirits last 5 seconds
+                                    or until they hit an enemy.
+                                    <ul>
+                                        <li>Lingering Spirits - Enraged Spirits linger for an additional 5 seconds or
+                                            until they hit the enemy. You can have upto 15 spirits.
+                                        </li>
+                                        <li>Terrifying Spirits - Lingering Spirits have a 5% chance to cause fear when
+                                            they touch an enemy.
+                                        </li>
+                                        <li>Summon Spectre - Changes Enraged Spirits to be a targeted ability that
+                                            summons a large spectre at the target enemy location. Only 1 active spectre
+                                            allowed at a time.
+                                            <ul>
+                                                <li>Enraged spirits - summons 2 per second with a maximum of 10</li>
+                                                <li>Wail - Casts a skill with a ten-meter range that has a 20% chance to
+                                                    cause fear.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>Spectral Aid - If you cast Enraged Spirits and have a spectre active, you
+                                            instead summon 5 spirits from the spectre's location
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Spirit Heal - Channeled ability that restores 10% of shaman's max HP to target
+                                    player after channeling for 1 second. Spirit Heal has a 35% chance to leap from one
+                                    party member to another.
+                                    <ul>
+                                        <li>Spirit Focus - Further increases healing effectiveness by an additional 5%
+                                            of shamans max HP.
+                                        </li>
+                                        <li>Spirit Mend - Spirit Heal's chance to leap to another party member increases
+                                            from 35% to 50%.
+                                        </li>
+                                        <li>Spirit Blessing - Party members healed by Spirit Heal are granted a buff
+                                            that regenerates 10% of the heal over 3 seconds.
+                                            If they are healed again while having the buff, the buff is consumed and
+                                            they are healed for an additional 30% of shaman's
+                                            max health instantly.
+                                        </li>
+                                        <li>Spirit Devotion - If a party member dies while having the Spirit Blessing
+                                            buff, they are Resurrected as a spirit version of themselves.
+                                            This spirit version is immune to all damage and lasts for 10 seconds. The
+                                            spirit version can use all abilities, but damage is reduced by 50%
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Spirit Animal - You become a spiritual version of your inner self. While in spirit
+                                    form you are immune to status effects.
+                                    <ul>
+                                        <li>Spirit Wolf - Your inner self is manifested as a ghost wolf. While in spirit
+                                            form you have a buff that follows you in a ten-meter area that grants 5%
+                                            HP/AP regeneration per second,
+                                            5% increased action speed, and cleanses a random status effect every second.
+                                            Spirit form lasts 20 seconds.
+                                        </li>
+                                        <li>Spirit Boar - Your inner self is manifested as a ghost boar. While in spirit
+                                            form your Enraged Spirits is replaced with Charge
+                                            <ul>
+                                                <li>Charge - dash to a target and deal physical damage. Attack has a 15%
+                                                    chance to cause bleeding on hit.
+                                                    Attack has 30% chance to daze target on hit. You return to the
+                                                    living realm after attacking.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>Spirit Hare - Your inner self is manifested as a ghost hare. While in spirit
+                                            form you move 40% faster and have 20% chance to avoid damage; Spirit form
+                                            lasts 10 seconds.
+                                        </li>
+                                        <li>Spirit Stag - Your inner self is manifested as a ghost stag. While in spirit
+                                            form you give other party members a buff that redirects 50% of the damage
+                                            they
+                                            take to you. While in spirit form you regenerate 25% of your Max HP every 2
+                                            seconds. Spirit form lasts 15 seconds or until you hit 0 HP. You do not die
+                                            when this occurs.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Banish Spirit - You attempt to banish the spirit of a target enemy. Skill has a 10%
+                                    chance to daze, confuse, and charm the target.
+                                    <ul>
+                                        <li>Soul Drain - When Banish Spirit successfully dazes, confuses, or charms the
+                                            target, the shaman gains 5% HP per status effect applied.
+                                        </li>
+                                        <li>Spectral Binding - If the target is successfully charmed, they fight for the
+                                            Shaman for 10 seconds before the charm wears off.
+                                        </li>
+                                        <li>Empowered Banishment - Banish Spirit now has a ten-meter area of effect
+                                            around the target.
+                                        </li>
+                                        <li>Spirit Annihilation - Grants the Banish Spirit skill a 5% chance to
+                                            instantly kill the target if the target's health is below 30%.
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </blockquote>
+                <br>
+                <p>Apprentice</p>
+                <br>
+                <blockquote>
+                    <ul>
+                        <li>Wizard
+                            <ul>
+                                <li>Arcane Blast (Atk) - Fires a large beam of Arcane energy at the target dealing damage.
+                                    <ul>
+                                        <li>Arcane Explosion - Arcane Blast now has an aoe explosion of five-meters around target on hit.</li>
+                                        <li>Arcane Efficiency - Reduces the AP cost.</li>
+                                        <li>Arcana - Monsters gain a debuff that reduces the damage they deal by 15% for 3 seconds.</li>
+                                        <li>Focus Beam - Arcane Blast can be instant cast or charged up to release a solid beam of arcane energy that follows the target.
+                                            All enemies in between path of player and monster take damage over time from the beam. Arcane explosion builds up on the target
+                                            gaining 5% damage increase per second until the player releases the charge or the monster dies. Dealing damage based on time spent charging. </li>
+                                    </ul>
+                                </li>
+                                <li>Teleportation (CA) - Teleports the Wizard to target location. Teleportation has a 4-second cool down.
+                                    <ul>
+                                        <li></li>
+                                        <li>Ethereal - Teleportation can travel through walls and doors as long as there is open space beyond it.</li>
+                                        <li>Vortex - Teleportation causes a vortex at the cast location, pulling in enemies and rooting them for 3 seconds.</li>
+                                        <li>Quick Travel - Removes the cooldown of Teleportation.</li>
+                                    </ul>
+                                </li>
+                                <li>Arcane Cloak (CA) - Buff that absorbs 30% of all damage for 10 seconds.
+                                    <ul>
+                                        <li>Nullification - Increases the damage absorption by 10%.</li>
+                                        <li>Cloak Of Invisibility - Grants the player invisibility for 3 seconds on cast.</li>
+                                        <li>Temporal Threads - Increased buff duration to 20 seconds.</li>
+                                        <li>Reflective Material - Reflects 25% of magical damage back to attacker.</li>
+                                    </ul>
+                                </li>
+                                <li>Mana Surge (Bf) - Restores 30 AP with a 3 second cooldown.
+                                    <ul>
+                                        <li>Intense Focus - Increases the mana restored by 10.</li>
+                                        <li>Power Surge - Mana Surge also grants a buff that increases damage by 20% for 10 seconds. Damage increased by 1% per remaining seconds if cast during duration.</li>
+                                        <li>Arcane Charge - Mana Surge becomes a charged ability that restores 20% of max AP over 1 second while being charged. Charging stops when player releases button or AP hits full.</li>
+                                        <li>Overcharge - If Mana Surge is channeled to max AP, arcane energy builds up around the player dealing damage over time. The area starts out at five-meters and grows by five-meters
+                                        every second channeled upto twenty-meters. Upon releasing the charge. A large super nova of arcane energy spreads across the screen dealing damage based on Max AP. Consumes all AP</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Illusionist
+                            <ul>
+                                <li>Illusionary Weapon (Atk) - Creates a copy of the equipped weapon that attacks as if the weapon is alive.
+                                    Deals damage based on weapon base damage. Summons 1 giant weapon for 2-handed or 2 large weapons for dual wield.
+                                    <ul>
+                                        <li>Mystic Infusion - Increases Illusionary Weapon's damage by 25%.</li>
+                                        <li>Mana Burn - Illusionary Weapon also burns a small amount of the target's AP.</li>
+                                        <li>Split - Illusionary Weapon summons twice the number of weapons.</li>
+                                        <li></li>
+                                    </ul>
+                                </li>
+                                <li>Mirror Image (CA) - Creates three illusionary copy of your character in a random location. Mirror images last 15 seconds or until hit.
+                                    <ul>
+                                        <li>Swap - You swap location with one of your mirror images.</li>
+                                        <li>Mimics - Your mirror images copy your actions and movement. But do not deal damage.</li>
+                                        <li>Unstable Images - Casting Teleportation while the images are active causes the current mirrors to explode in arcane energy dealing damage in a
+                                            ten-meter area around them. New images are created to replace them.</li>
+                                        <li>Shadow Clone - Also summon 3 Shadow Clones of your character. Shadow Clones mimic all actions and deal damage. They no longer disappear on hit, but you take the damage they take.
+                                        Unstable Images does not cause Shadow Clones to explode, only the Mirror Images. If your HP drops to 20% all Shadow Clones disappear.</li>
+                                    </ul>
+                                </li>
+                                <li>Confuse (CA)
+                                    <ul>
+                                        <li>Greater Confuse - Increases the duration of confusion.</li>
+                                        <li>Quick Confuse - Reduces the casting time.</li>
+                                        <li>Efficient Confuse - Reduces the energy cost.</li>
+                                        <li>Mass Confusion - Affects multiple enemies.</li>
+                                    </ul>
+                                </li>
+                                <li>Phantom Army (CA)
+                                    <ul>
+                                        <li>Greater Phantom Army - Increases the number of summoned phantoms.</li>
+                                        <li>Quick Phantom Army - Reduces the casting time.</li>
+                                        <li>Efficient Phantom Army - Reduces the energy cost.</li>
+                                        <li>Empowered Phantoms - Phantoms deal increased damage.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Warlock
+                            <ul>
+                                <li>Shadow Bolt (Atk)
+                                    <ul>
+                                        <li>Greater Shadow Bolt - Increases the damage dealt.</li>
+                                        <li>Quick Shadow Bolt - Reduces the casting time.</li>
+                                        <li>Efficient Shadow Bolt - Reduces the energy cost.</li>
+                                        <li>Corrupting Bolt - Applies a damage-over-time effect.</li>
+                                    </ul>
+                                </li>
+                                <li>Summon Demon (CA)
+                                    <ul>
+                                        <li>Greater Demon - Summons a more powerful demon.</li>
+                                        <li>Quick Summon - Reduces the casting time.</li>
+                                        <li>Efficient Summon - Reduces the energy cost.</li>
+                                        <li>Demon Horde - Summons multiple lesser demons.</li>
+                                    </ul>
+                                </li>
+                                <li>Dark Pact (Bf)
+                                    <ul>
+                                        <li>Greater Dark Pact - Increases the benefits of the pact.</li>
+                                        <li>Quick Pact - Reduces the casting time.</li>
+                                        <li>Efficient Pact - Reduces the energy cost.</li>
+                                        <li>Pact of Sacrifice - Increases power at the cost of health.</li>
+                                    </ul>
+                                </li>
+                                <li>Hellfire (Atk)
+                                    <ul>
+                                        <li>Greater Hellfire - Increases the area of effect.</li>
+                                        <li>Quick Hellfire - Reduces the casting time.</li>
+                                        <li>Efficient Hellfire - Reduces the energy cost.</li>
+                                        <li>Infernal Flames - Hellfire has a chance to summon imps to attack enemies.
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </blockquote>
+                <br>
+                <hr>
+                <br>
+                <div class="text-yellow-200">Mastery Disciplines</div>
+                <br>
+                <ul>
+                    <li>
+                        Mercenary (Warrior + Ranger)
+                        <ul>
+                            <li>Combat Plan (Psv) - Boosts Weapon Damage (Melee/Ranged)</li>
+                            <li>Tactics (Psv) - Increased Defense/Damage Reduction</li>
+                        </ul>
+                    </li>
+                    <li>
+                        War Mage (Warrior + Wizard)
+                        <ul>
+                            <li>Enchant Weapon (Psv) - Elemental Magic (Pick 1) Applied to Weapon (+Elemental Damage)
+                            </li>
+                            <li>Enchant Armor (Psv) - Elemental Magic (Pick 1) Applied To Armor (+Def Element)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Champion (Warrior + Cleric)
+                        <ul>
+                            <li>Holy Shroud (Psv) - % Magic Damage Reduction</li>
+                            <li>Inspire (Bf) - Stat Boost Aura</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Spell Thief (Ranger + Wizard)
+                        <ul>
+                            <li>Drain Mana (Bf) - Applies mana steal to melee\ranged weapon</li>
+                            <li>Interrupt (CA) - Ranged spell that interrupts and Prevents Spell Cast for 5 seconds.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Artificer (Ranger + Cleric)
+                        <ul>
+                            <li>Healing Brew (CA) - Healing Spell + Short Buff</li>
+                            <li>Damage Brew (Atk) - Damage + Debuff</li>
+                            <li>Blessed Balistics (Bf) - Holy Damage Ranged Weapon Buff</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Zealot (Cleric + Wizard)
+                        <ul>
+                            <li>Fear (CA) - Debuff</li>
+                            <li>Holy Shield (Psv) - Magic &amp; Physical Damage Reduction</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Panel -->
+        <div class="w-full p-4 text-[10px] mb-10"
+             style="background: rgba(0, 0, 0, .5);font-family: 'mana_seed_staticregular', sans-serif;">
+            <div class="bg-sky-800 text-white w-fit p-2 -mt-8 shadow-xl">
+                Example Skill Tree
+            </div>
+            <div class="mt-5 ml-2">
+                <img src="/images/SkillLayoutExample.png">
+            </div>
+        </div>
+        <!-- Panel -->
+
+    </main>
+    <footer class="bg-black border border-black w-full p-1">
+        <div class="max-w-7xl mx-auto py-2 px-1 md:flex md:items-center md:justify-between md:pl-4">
+            <div class="flex justify-center space-x-8 md:space-x-4 md:order-2">
+                <a href="https://www.facebook.com/pixelartrpg" target="_blank"
+                   class="text-gray-400 hover:text-gray-500">
+                    <span class="sr-only">Facebook</span>
+                    <i class="fa-brands fa-facebook-f text-2xl text-sky-200"></i>
+                </a>
+
+                <a href="https://www.reddit.com/r/pixelartrpg/" target="_blank"
+                   class="text-gray-400 hover:text-gray-500 mx-2">
+                    <span class="sr-only">Reddit</span>
+                    <i class="fa-brands fa-reddit-alien text-2xl text-sky-200"></i>
+                </a>
+
+                <a href="https://twitter.com/pixelartrpg" target="_blank" class="text-gray-400 hover:text-gray-500">
+                    <span class="sr-only">Twitter</span>
+                    <i class="fa-brands fa-twitter text-2xl text-sky-200"></i>
+                </a>
+
+                <a href="https://github.com/pixelartrpg" target="_blank" class="text-gray-400 hover:text-gray-500">
+                    <span class="sr-only">GitHub</span>
+                    <i class="fa-brands fa-github text-2xl text-sky-200"></i>
+                </a>
+            </div>
+            <div class="mt-2 md:mt-0 md:order-1">
+                <p class="text-center text-[11px] text-sky-200"
+                   style="font-family: 'mana_seed_staticregular', Arial, sans-serif;">&copy; 2022 Pixel Art RPG</p>
+            </div>
+        </div>
+    </footer>
+    <!--
+    <div class="flex items-center m-2 fixed bottom-0 left-0 border border-gray-400 rounded p-2 bg-gray-300 text-red-600 text-xl z-50 opacity-100 cursor-pointer">
+        <span class="ml-1 sm:hidden md:hidden lg:hidden xl:hidden">xs</span>
+        <span class="ml-1 hidden sm:inline md:hidden font-extrabold">sm</span>
+        <span class="ml-1 hidden md:inline lg:hidden font-extrabold">md</span>
+        <span class="ml-1 hidden lg:inline xl:hidden font-extrabold">lg</span>
+        <span class="ml-1 hidden xl:inline font-extrabold">xl</span>
+    </div>
+    -->
+</div>
+</body>
 </html>
